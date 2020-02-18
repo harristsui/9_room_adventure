@@ -74,8 +74,8 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             LP -= 1;
-
             Hurt();
+            Handheld.Vibrate();
         }
 
         //if collect key, show key UI
