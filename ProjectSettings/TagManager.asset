@@ -45,3 +45,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Bullets
+    uniqueID: 2440255949
+    locked: 0
+  - name: Interactable
+    uniqueID: 45244787
+    locked: 0
+  - name: Characters
+    uniqueID: 442531321
+    locked: 0
+  - name: Walls
+    uniqueID: 33142499
+    locked: 0
