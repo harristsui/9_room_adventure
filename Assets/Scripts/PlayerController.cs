@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
     public float fireRate;
     public GameObject keyUI;
 
+    public AudioClip DeadPlayer;
+
+    private AudioSource playerSource;
+
     public static int LP;
 
     SpriteRenderer sr;
@@ -29,6 +33,8 @@ public class PlayerController : MonoBehaviour
         c = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
         InvokeRepeating("Shoot", 0, fireRate);
+
+        playerSource = GetComponent<AudioSource>();
     }
 
     /// <summary>
@@ -97,6 +103,7 @@ public class PlayerController : MonoBehaviour
 
         if (LP == 0)
         {
+            playerSource.PlayOneShot(DeadPlayer);
             Destroy(gameObject);
         }
 

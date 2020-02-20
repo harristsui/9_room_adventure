@@ -389,6 +389,7 @@ MonoBehaviour:
   firePoint: {fileID: 1853731654}
   fireRate: 0.2
   keyUI: {fileID: 552788604}
+  DeadPlayer: {fileID: 8300000, guid: 50c150404e1ba484dbe2b23df62e1003, type: 3}
 --- !u!50 &487141870
 Rigidbody2D:
   serializedVersion: 4
