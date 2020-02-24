@@ -102,7 +102,8 @@ public class GameManage : MonoBehaviour
 
             }
             */
-            
+
+            //move camera to the center of the new room
             cam.transform.position = Vector3.MoveTowards(cam.transform.position, xOffset, 10f * Time.deltaTime);
             if (cam.transform.position == xOffset)
             {
