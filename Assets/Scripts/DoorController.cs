@@ -32,7 +32,8 @@ public class DoorController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameManage.generate = true;
+            //GameManage.generate = true;
+            GameManage.newRoom = true;
         }
     }
 }
