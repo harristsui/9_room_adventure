@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     public float fireRate;
     public GameObject keyUI;
 
-    public AudioClip DeadPlayer;
 
     private AudioSource playerSource;
 
@@ -109,7 +108,6 @@ public class PlayerController : MonoBehaviour
         HP[LP].SetActive(false);
         if (LP == 0)
         {
-            playerSource.PlayOneShot(DeadPlayer);
             Destroy(gameObject);
         }
 
