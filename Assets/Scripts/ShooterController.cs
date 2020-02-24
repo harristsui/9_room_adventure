@@ -29,7 +29,7 @@ public class ShooterController : MonoBehaviour
 
     IEnumerator FireBullets()
     {
-        Debug.Log("fired");
+        //Debug.Log("fired");
         fired = true;
         for (int i = 0; i < nBullets; i++)
         {
