@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     public static int LP;
 
+    bool invincible;
     SpriteRenderer sr;
     Collider2D c;
     Rigidbody2D rb;
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        invincible = false;
         LP = 3;
         HP[0].SetActive(true);
         HP[1].SetActive(true);
@@ -42,7 +44,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Shoot()
     {
-        if (Input.GetButton("Jump"))
+        if (!GameManage.fading && Input.GetButton("Jump"))
         {
             Instantiate(Bullet, firePoint.position, transform.rotation);
         }
@@ -71,17 +73,22 @@ public class PlayerController : MonoBehaviour
         //If hit by enemy bullet, destroy bullet and reduce health
         if (collision.CompareTag("EnemyBullet"))
         {
-            LP -= 1;
             Destroy(collision.gameObject);
-
-            Hurt();
+            if (!invincible)
+            {
+                LP -= 1;
+                Hurt();
+            }
+            
         }
         //if hit by enemy, reduce health
         if (collision.CompareTag("Enemy"))
         {
-            LP -= 1;
-            Hurt();
-            Handheld.Vibrate();
+            if (!invincible)
+            {
+                LP -= 1;
+                Hurt();
+            }
         }
 
         //if collect key, show key UI
@@ -100,7 +107,6 @@ public class PlayerController : MonoBehaviour
     void Hurt()
     {
         HP[LP].SetActive(false);
-
         if (LP == 0)
         {
             playerSource.PlayOneShot(DeadPlayer);
@@ -110,10 +116,11 @@ public class PlayerController : MonoBehaviour
         StopAllCoroutines();
         sr.color = new Color(255, 255, 255, 1);
         c.enabled = true;
-        StartCoroutine("NotCollide");
+        //StartCoroutine("NotCollide");
         StartCoroutine("Blink");
     }
 
+    /*
     /// <summary>
     /// A Period of Invincible Time After Hurt
     /// </summary>
@@ -125,6 +132,7 @@ public class PlayerController : MonoBehaviour
         c.enabled = true;
         yield break;
     }
+    */
 
     /// <summary>
     /// Blink Animation When Hurt
@@ -132,6 +140,7 @@ public class PlayerController : MonoBehaviour
     /// <returns></returns>
     IEnumerator Blink()
     {
+        invincible = true;
         for (int i = 0; i < 3; i++)
         {
             sr.color = new Color(255, 255, 255, 0);
@@ -139,5 +148,6 @@ public class PlayerController : MonoBehaviour
             sr.color = new Color(255, 255, 255, 1);
             yield return new WaitForSeconds(.1f);
         }
+        invincible = false;
     }
 }
