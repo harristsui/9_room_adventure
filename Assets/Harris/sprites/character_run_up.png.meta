@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: c83a4901669ce9145bdbf7fbcb7b1324
+guid: 3162b1378eeeacb49a7356322bfe6933
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 663589859350792619
-    second: character_run_down_0
+      213: -8711845556503833833
+    second: character_run_up_0
   - first:
-      213: 5870692041857106248
-    second: character_run_down_1
+      213: 5245997231150102770
+    second: character_run_up_1
   - first:
-      213: -804580693160569380
-    second: character_run_down_2
+      213: 4758276056036289773
+    second: character_run_up_2
   - first:
-      213: 5170212215396337516
-    second: character_run_down_3
+      213: -9170608604862564536
+    second: character_run_up_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -118,101 +118,89 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character_run_down_0
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 5145
-        width: 1110
-        height: 1455
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55b473d4aa8974b10a1d9c73de4643cc
-      internalID: 663589859350792619
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_run_down_1
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 3447
-        width: 1384
-        height: 1681
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ed1af24b11d948a8a2f99e2133705ae
-      internalID: 5870692041857106248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_run_down_2
+      name: character_run_up_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1659
-        width: 1382
-        height: 1682
+        y: 5909
+        width: 1500
+        height: 1457
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 843b9f952bc2647eb97441e2abc7ef11
-      internalID: -804580693160569380
+      spriteID: 8b26be9b1a53e4d3f9608891f9e9f337
+      internalID: -8711845556503833833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: character_run_down_3
+      name: character_run_up_1
       rect:
         serializedVersion: 2
-        x: 44
-        y: 0
-        width: 1382
-        height: 1728
+        x: 159
+        y: 3983
+        width: 1184
+        height: 1783
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1304876a585134505a782483f9f96ea3
-      internalID: 5170212215396337516
+      spriteID: 7a2b0d650015e4f0c85e6a61d49c4360
+      internalID: 5245997231150102770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_run_up_2
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2057
+        width: 1185
+        height: 1785
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7a3a6e414a941d8bbd1c6508ee1ae3
+      internalID: 4758276056036289773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_run_up_3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 134
+        width: 1185
+        height: 1783
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6813fc0d11fd243c39098dff7066c438
+      internalID: -9170608604862564536
       vertices: []
       indices: 
       edges: []
