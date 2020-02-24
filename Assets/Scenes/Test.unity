@@ -227,6 +227,80 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &131753503
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4009261131335271260, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 487141868}
+    - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.2729955
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.53069925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.52566147
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930400137783706163, guid: 4685318297ba748dd9feeefae3fb69ec,
+        type: 3}
+      propertyPath: m_Name
+      value: DieSound
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4685318297ba748dd9feeefae3fb69ec, type: 3}
 --- !u!4 &153295751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2146911894682763317, guid: 6ebc70c0fb0004f589409792cf8b32f5,
@@ -1015,7 +1089,6 @@ MonoBehaviour:
   firePoint: {fileID: 1853731654}
   fireRate: 0.2
   keyUI: {fileID: 552788604}
-  DeadPlayer: {fileID: 8300000, guid: 6841e3e770db545a49ae0e98403d508c, type: 3}
 --- !u!50 &487141870
 Rigidbody2D:
   serializedVersion: 4
