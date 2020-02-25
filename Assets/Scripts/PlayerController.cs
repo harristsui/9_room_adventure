@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public GameObject Bullet;
     public Transform firePoint;
     public float fireRate;
-    public GameObject keyUI;
 
 
     private AudioSource playerSource;
@@ -29,7 +28,6 @@ public class PlayerController : MonoBehaviour
         HP[0].SetActive(true);
         HP[1].SetActive(true);
         HP[2].SetActive(true);
-        keyUI.SetActive(false);
         rb = GetComponent<Rigidbody2D>();
         c = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -93,7 +91,9 @@ public class PlayerController : MonoBehaviour
         //if collect key, show key UI
         if (collision.CompareTag("Key"))
         {
-            keyUI.SetActive(true);
+            int n = System.Array.IndexOf(GameManage.rooms, collision.gameObject.transform.parent.gameObject);
+            Debug.Log(n);
+            GameManage.keyCollected[n] = true;
             Destroy(collision.gameObject);
         }
 

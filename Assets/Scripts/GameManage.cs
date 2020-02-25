@@ -17,14 +17,18 @@ public class GameManage : MonoBehaviour
     public GameObject player;
 
     [Tooltip("This is the offset between rooms")]
-    public Vector3 xOffset, yOffset;
+    public float xOffset, yOffset;
 
     GameObject[] enemies;
     int keyEnemy;
     bool keyGenerated;
     bool start;
     Vector2 lastPos;
-    Vector2 roomIndex;
+
+    public static GameObject[] rooms;
+    public static bool[] keyCollected;
+    Vector2 currentRoom;
+    bool moving;
 
     // Start is called before the first frame update
     void Start()
@@ -40,11 +44,19 @@ public class GameManage : MonoBehaviour
 
         newRoom = false;
 
-        roomIndex = new Vector2(0, 0);
-
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         keyEnemy = Random.Range(0, enemies.Length);
         fade.GetComponent<Image>().color = new Color(0, 0, 0, 1);
+
+        currentRoom = new Vector2(0, 0);
+        rooms = GameObject.FindGameObjectsWithTag("Room");
+        
+        keyCollected = new bool[rooms.Length];
+        for(int i = 0; i < rooms.Length; i++)
+        {
+            keyCollected[i] = false;
+        }
+        moving = false;
     }
 
     // Update is called once per frame
@@ -82,33 +94,58 @@ public class GameManage : MonoBehaviour
         }
         if (!enemies[keyEnemy] && !keyGenerated)
         {
-            Instantiate(key, lastPos, Quaternion.identity);
+            Instantiate(key, lastPos, Quaternion.identity, GameObject.Find("Room" + currentRoom.x + currentRoom.y).transform);
             keyGenerated = true;
         }
         #endregion
 
+        for(int i = 0; i < keyCollected.Length; i++)
+        {
+            if (keyCollected[i])
+            {
+                foreach(Transform go in rooms[i].transform)
+                {
+                    if (go.name == "Door")
+                    {
+                        go.GetComponent<SpriteRenderer>().enabled = false;
+                        go.GetComponent<Collider2D>().isTrigger = true;
+                    }
+                }
+            }
+        }
+
+
         if (newRoom)
         {
             //check which room to fade in and move camera to
-            /*
+            
             float xdiff = player.transform.position.x - cam.transform.position.x;
             float ydiff = player.transform.position.y - cam.transform.position.y;
             if (Mathf.Abs(xdiff) < Mathf.Abs(ydiff))
             {
-
+                currentRoom += new Vector2(0, 1 * Mathf.Sign(ydiff));
+                moving = true;
+                newRoom = false;
             }
             else
             {
-
-            }
-            */
-
-            //move camera to the center of the new room
-            cam.transform.position = Vector3.MoveTowards(cam.transform.position, xOffset, 10f * Time.deltaTime);
-            if (cam.transform.position == xOffset)
-            {
+                currentRoom += new Vector2(1 * Mathf.Sign(xdiff), 0);
+                moving = true;
                 newRoom = false;
+            }          
+        }
+
+        if (moving)
+        {
+            //move camera to the center of the new room
+            Vector3 targetPos = new Vector3(currentRoom.x * xOffset, currentRoom.y * yOffset, cam.transform.position.z);
+            Debug.Log(targetPos);
+            cam.transform.position = Vector3.MoveTowards(cam.transform.position, targetPos, 10f * Time.deltaTime);
+            if (cam.transform.position == targetPos)
+            {
+                moving = false;
             }
         }
+        
     }
 }
