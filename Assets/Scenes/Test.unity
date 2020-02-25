@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 7802900}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,7 +277,7 @@ PrefabInstance:
     - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4930400137783706161, guid: 4685318297ba748dd9feeefae3fb69ec,
         type: 3}
@@ -337,7 +337,7 @@ Transform:
   m_LocalScale: {x: 4.049122, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 518010451}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &158623633
 BoxCollider2D:
@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 195734840}
   m_Layer: 0
   m_Name: Wall (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 226011527}
   m_Layer: 0
   m_Name: Door1
-  m_TagString: Wall
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -553,7 +553,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 298020716}
   m_Layer: 0
   m_Name: Wall (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -905,7 +905,7 @@ PrefabInstance:
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
@@ -938,7 +938,7 @@ GameObject:
   - component: {fileID: 313621325}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1491,7 +1491,7 @@ Transform:
   m_Children:
   - {fileID: 1853731654}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &487141874
 AudioSource:
@@ -1622,11 +1622,11 @@ GameObject:
   - component: {fileID: 488511552}
   m_Layer: 0
   m_Name: Door (1)
-  m_TagString: Wall
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &488511551
 Transform:
   m_ObjectHideFlags: 0
@@ -1666,7 +1666,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1757,6 +1757,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1614831783}
+  - {fileID: 1011952953}
+  - {fileID: 1644858434}
   - {fileID: 1343415491}
   - {fileID: 756477558}
   - {fileID: 1972187644}
@@ -1769,7 +1771,7 @@ Transform:
   - {fileID: 158623632}
   - {fileID: 963127352}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!82 &518010452
 AudioSource:
@@ -1886,7 +1888,7 @@ GameObject:
   - component: {fileID: 544791944}
   m_Layer: 0
   m_Name: Wall (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2075,7 +2077,7 @@ RectTransform:
   - {fileID: 1783022064}
   - {fileID: 1664132016}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2095,7 +2097,7 @@ GameObject:
   - component: {fileID: 571545488}
   m_Layer: 0
   m_Name: Wall (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2237,7 +2239,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &583835885
 AudioSource:
@@ -2986,7 +2988,7 @@ PrefabInstance:
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
@@ -3034,7 +3036,7 @@ Transform:
   m_LocalScale: {x: 0.6402375, y: 0.6402375, z: 1.2195}
   m_Children: []
   m_Father: {fileID: 518010451}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &963127353
 SpriteRenderer:
@@ -3099,7 +3101,7 @@ GameObject:
   - component: {fileID: 983207704}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Wall
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3143,7 +3145,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3235,7 +3237,7 @@ Transform:
   m_LocalScale: {x: 10.066323, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 518010451}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &986307604
 BoxCollider2D:
@@ -3312,6 +3314,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1011952953 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
+    type: 3}
+  m_PrefabInstance: {fileID: 1650176778}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1117501764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3454,7 +3462,7 @@ Transform:
   - {fileID: 544791943}
   - {fileID: 625631198}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1161985659
 GameObject:
@@ -3497,7 +3505,7 @@ Transform:
   - {fileID: 983207703}
   - {fileID: 331593136}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1161985661
 AudioSource:
@@ -3606,7 +3614,7 @@ GameObject:
   - component: {fileID: 1187103161}
   m_Layer: 0
   m_Name: Room10
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3632,14 +3640,14 @@ Transform:
   - {fileID: 1614686191}
   - {fileID: 440832068}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1241413157
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 518010451}
     m_Modifications:
     - target: {fileID: 2252982803050227857, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
@@ -3649,7 +3657,7 @@ PrefabInstance:
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.319998
+      value: 2.6800022
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
@@ -3664,17 +3672,17 @@ PrefabInstance:
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
@@ -3717,11 +3725,11 @@ GameObject:
   - component: {fileID: 1254479124}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Wall
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1254479123
 Transform:
   m_ObjectHideFlags: 0
@@ -3734,7 +3742,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.6909599, z: 1}
   m_Children: []
   m_Father: {fileID: 518010451}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1254479124
 MonoBehaviour:
@@ -3761,7 +3769,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3837,7 +3845,7 @@ GameObject:
   - component: {fileID: 1287549441}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3881,7 +3889,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3956,7 +3964,7 @@ GameObject:
   - component: {fileID: 1300668615}
   m_Layer: 0
   m_Name: Wall (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4080,7 +4088,7 @@ Transform:
   m_LocalScale: {x: 4.049122, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 518010451}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1334998876
 BoxCollider2D:
@@ -4286,7 +4294,7 @@ PrefabInstance:
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
@@ -4341,7 +4349,7 @@ Transform:
   m_LocalScale: {x: 19.925024, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 518010451}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1521041083
 BoxCollider2D:
@@ -4504,7 +4512,7 @@ GameObject:
   - component: {fileID: 1585686950}
   m_Layer: 0
   m_Name: Wall (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4662,7 +4670,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1603878657
 GameObject:
@@ -4784,7 +4792,7 @@ GameObject:
   - component: {fileID: 1614686192}
   m_Layer: 0
   m_Name: Wall (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5060,12 +5068,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce313a1e223544f4f81da6202523c80a, type: 3}
+--- !u!4 &1644858434 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
+    type: 3}
+  m_PrefabInstance: {fileID: 1241413157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1650176778
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 518010451}
     m_Modifications:
     - target: {fileID: 2252982803050227857, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
@@ -5075,7 +5089,7 @@ PrefabInstance:
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.88
+      value: -0.87999916
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
@@ -5090,22 +5104,22 @@ PrefabInstance:
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
@@ -5341,7 +5355,7 @@ Transform:
   m_LocalScale: {x: 19.925024, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 518010451}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2011450665
 BoxCollider2D:
@@ -5437,7 +5451,7 @@ GameObject:
   - component: {fileID: 2123457495}
   m_Layer: 0
   m_Name: Wall (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5650,7 +5664,7 @@ PrefabInstance:
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2252982803050227862, guid: 005ee649a648a47e89544e19f0edbd59,
         type: 3}

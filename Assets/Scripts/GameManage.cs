@@ -28,7 +28,8 @@ public class GameManage : MonoBehaviour
     public static GameObject[] rooms;
     public static bool[] keyCollected;
     Vector2 currentRoom;
-    bool moving;
+    public static bool moving;
+    GameObject previousRoom;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +56,14 @@ public class GameManage : MonoBehaviour
         for(int i = 0; i < rooms.Length; i++)
         {
             keyCollected[i] = false;
+            if (rooms[i].name != "Room00")
+            {
+                rooms[i].SetActive(false);
+            }
+            else
+            {
+                previousRoom = rooms[i];
+            }
         }
         moving = false;
     }
@@ -105,7 +114,7 @@ public class GameManage : MonoBehaviour
             {
                 foreach(Transform go in rooms[i].transform)
                 {
-                    if (go.name == "Door")
+                 if (go.tag == "Door")
                     {
                         go.GetComponent<SpriteRenderer>().enabled = false;
                         go.GetComponent<Collider2D>().isTrigger = true;
@@ -114,36 +123,88 @@ public class GameManage : MonoBehaviour
             }
         }
 
-
         if (newRoom)
         {
             //check which room to fade in and move camera to
-            
             float xdiff = player.transform.position.x - cam.transform.position.x;
             float ydiff = player.transform.position.y - cam.transform.position.y;
+
             if (Mathf.Abs(xdiff) < Mathf.Abs(ydiff))
             {
-                currentRoom += new Vector2(0, 1 * Mathf.Sign(ydiff));
+                currentRoom += new Vector2(1 * Mathf.Sign(ydiff), 0);
+                for(int i = 0; i < rooms.Length; i++)
+                {
+                    if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
+                    {
+                        rooms[i].SetActive(true);
+                        previousRoom.SetActive(false);
+                        previousRoom = rooms[i];
+                    }
+                }
                 moving = true;
                 newRoom = false;
             }
             else
             {
-                currentRoom += new Vector2(1 * Mathf.Sign(xdiff), 0);
+                currentRoom += new Vector2(0, 1 * Mathf.Sign(xdiff));
+                for (int i = 0; i < rooms.Length; i++)
+                {
+                    if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
+                    {
+                        rooms[i].SetActive(true);
+                        previousRoom.SetActive(false);
+                        previousRoom = rooms[i];
+                    }
+                }
                 moving = true;
                 newRoom = false;
-            }          
+            }
+            
         }
-
+        //Debug.Log(currentRoom);
         if (moving)
         {
+
+            for (int i = 0; i < rooms.Length; i++)
+            {
+                if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
+                {
+                    foreach (Transform go in rooms[i].transform)
+                    {
+                        if (go.CompareTag("Door"))
+                        {
+                            go.GetComponent<SpriteRenderer>().enabled = false;
+                            go.GetComponent<Collider2D>().isTrigger = true;
+                        }
+                    }
+                }
+            }
+
             //move camera to the center of the new room
-            Vector3 targetPos = new Vector3(currentRoom.x * xOffset, currentRoom.y * yOffset, cam.transform.position.z);
-            Debug.Log(targetPos);
+            //currentRoom.x and currentRoom.y are put in the opposite position because for me it's easier to read if the first number represents y index instead of x index of a room
+            Vector3 targetPos = new Vector3(currentRoom.y * xOffset, currentRoom.x * yOffset, cam.transform.position.z);
+
             cam.transform.position = Vector3.MoveTowards(cam.transform.position, targetPos, 10f * Time.deltaTime);
             if (cam.transform.position == targetPos)
             {
                 moving = false;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < rooms.Length; i++)
+            {
+                if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
+                {
+                    foreach (Transform go in rooms[i].transform)
+                    {
+                        if (go.CompareTag("Door") && !keyCollected[i])
+                        {
+                            go.GetComponent<SpriteRenderer>().enabled = true;
+                            go.GetComponent<Collider2D>().isTrigger = false;
+                        }
+                    }
+                }
             }
         }
         

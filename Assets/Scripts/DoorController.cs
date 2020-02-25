@@ -28,10 +28,10 @@ public class DoorController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !GameManage.moving)
         {
+            Debug.Log("player entered");
             //GameManage.generate = true;
-            Debug.Log("entered");
             GameManage.newRoom = true;
         }
     }
