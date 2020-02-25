@@ -10,8 +10,9 @@ public class PlayerController : MonoBehaviour
     public Transform firePoint;
     public float fireRate;
 
+    public FloatingJoystick leftJS, rightJS;
 
-    private AudioSource playerSource;
+    AudioSource playerSource;
 
     public static int LP;
 
@@ -41,7 +42,14 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Shoot()
     {
-        if (!GameManage.fading && Input.GetButton("Jump"))
+        //shoot in laptop
+        //if (!GameManage.fading && Input.GetButton("Jump"))
+        //{
+        //    Instantiate(Bullet, firePoint.position, transform.rotation);
+        //}
+
+        //shoot in phone
+        if (rightJS.Horizontal != 0 || rightJS.Vertical != 0)
         {
             Instantiate(Bullet, firePoint.position, transform.rotation);
         }
@@ -52,14 +60,25 @@ public class PlayerController : MonoBehaviour
     {
         if (!GameManage.fading)
         {
-            //Player Movement
-            float x = Input.GetAxisRaw("Horizontal");
-            float y = Input.GetAxisRaw("Vertical");
+            //Player Movement in Laptop
+            //float x = Input.GetAxisRaw("Horizontal");
+            //float y = Input.GetAxisRaw("Vertical");
+
+            //Player Movement on phone
+            float x = leftJS.Horizontal;
+            float y = leftJS.Vertical;
             rb.velocity = new Vector2(x * speed, y * speed);
 
-            //Player Rotation
-            Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
+            //Player Rotation in Laptop
+            //Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
+
+            //Player Rotation on
+            //transform.up = new Vector2(rightJS.Horizontal, rightJS.Vertical).normalized;
+            if(rightJS.Horizontal!=0 && rightJS.Vertical != 0)
+            {
+                transform.up = rightJS.Direction.normalized;
+            }
         }
         
     }
