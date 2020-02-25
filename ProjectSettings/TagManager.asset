@@ -9,6 +9,7 @@ TagManager:
   - PlayerBullet
   - Key
   - Wall
+  - Room
   layers:
   - Default
   - TransparentFX
