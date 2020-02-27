@@ -8,19 +8,23 @@ public class PlayerDied : MonoBehaviour
     public GameObject player;
     public AudioClip dieSound;
 
-    private AudioSource Die;
-    
-    // Start is called before the first frame update
-    void Start(){
-        Die = GetComponent<AudioSource>();
+    AudioSource aud;
+    bool died;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        aud = GetComponent<AudioSource>();
+        died = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(PlayerController.LP == 0){
-            Die.PlayOneShot(dieSound);
+        if (PlayerController.LP == 0 && !died)
+        {
+            aud.PlayOneShot(dieSound);
+            died = true;
         }
     }
 }

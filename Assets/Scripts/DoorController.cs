@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public GameObject keyUI;
-
     SpriteRenderer sr;
     Collider2D c;
 
@@ -21,17 +19,18 @@ public class DoorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (keyUI.activeSelf)
-        {
-            sr.enabled = false;
-            c.isTrigger = true;
-        }
+        //if (keyUI.activeSelf)
+        //{
+        //    sr.enabled = false;
+        //    c.isTrigger = true;
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !GameManage.moving)
         {
+            Debug.Log("player entered");
             //GameManage.generate = true;
             GameManage.newRoom = true;
         }

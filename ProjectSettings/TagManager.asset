@@ -9,6 +9,8 @@ TagManager:
   - PlayerBullet
   - Key
   - Wall
+  - Room
+  - Door
   layers:
   - Default
   - TransparentFX
