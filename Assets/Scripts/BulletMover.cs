@@ -17,8 +17,17 @@ public class BulletMover : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = transform.rotation * Vector2.up * speed;
     }
-    void OnBecameInvisible()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     }
+
+    //void OnBecameInvisible()
+    //{
+    //    Destroy(gameObject);
+    //}
 }

@@ -148,7 +148,7 @@ MonoBehaviour:
   chaseTime: 2
   speed: 0.5
   forwardDist: 1
-  HP: 5
+  HP: 6
   bullet: {fileID: 2350677938468387011, guid: a1400701f073c41348c11753fc09d8f0, type: 3}
 --- !u!82 &-2327155371180963245
 AudioSource:

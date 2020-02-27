@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool onLaptop;
     public float speed;
     public GameObject[] HP;
     public GameObject Bullet;
     public Transform firePoint;
     public float fireRate;
-    public GameObject keyUI;
 
+    public FloatingJoystick leftJS, rightJS;
 
-    private AudioSource playerSource;
+    AudioSource playerSource;
 
     public static int LP;
 
@@ -29,7 +30,6 @@ public class PlayerController : MonoBehaviour
         HP[0].SetActive(true);
         HP[1].SetActive(true);
         HP[2].SetActive(true);
-        keyUI.SetActive(false);
         rb = GetComponent<Rigidbody2D>();
         c = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -43,25 +43,59 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Shoot()
     {
-        if (!GameManage.fading && Input.GetButton("Jump"))
-        {
-            Instantiate(Bullet, firePoint.position, transform.rotation);
-        }
-    }
+		//shoot in laptop
+		if (onLaptop)
+		{
+            if (!GameManage.fading && Input.GetButton("Jump"))
+		    {
+			    Instantiate(Bullet, firePoint.position, transform.rotation);
+		    }
+		}
+
+		//shoot in phone
+		if (!onLaptop)
+		{
+            if (rightJS.Horizontal != 0 || rightJS.Vertical != 0)
+		    {
+			    Instantiate(Bullet, firePoint.position, transform.rotation);
+		    }
+		}
+		
+	}
 
     // Update is called once per frame
     void Update()
     {
         if (!GameManage.fading)
         {
-            //Player Movement
-            float x = Input.GetAxisRaw("Horizontal");
-            float y = Input.GetAxisRaw("Vertical");
-            rb.velocity = new Vector2(x * speed, y * speed);
+			
+			if (onLaptop)
+			{
+                //Player Movement in Laptop
+                float x = Input.GetAxisRaw("Horizontal");
+			    float y = Input.GetAxisRaw("Vertical");
+                rb.velocity = new Vector2(x * speed, y * speed);
 
-            //Player Rotation
-            Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
+                //Player Rotation in Laptop
+                Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
+            }
+
+
+			
+			if (!onLaptop)
+			{
+                //Player Movement on phone
+                float x = leftJS.Horizontal;
+                float y = leftJS.Vertical;
+                rb.velocity = new Vector2(x * speed, y * speed);
+
+                //Player Rotation on phone
+                if (rightJS.Horizontal != 0 && rightJS.Vertical != 0)
+                {
+                    transform.up = rightJS.Direction.normalized;
+                }
+            }
         }
         
     }
@@ -93,11 +127,24 @@ public class PlayerController : MonoBehaviour
         //if collect key, show key UI
         if (collision.CompareTag("Key"))
         {
-            keyUI.SetActive(true);
+            int n = System.Array.IndexOf(GameManage.rooms, collision.gameObject.transform.parent.gameObject);
+            Debug.Log(n);
+            GameManage.keyCollected[n] = true;
             Destroy(collision.gameObject);
         }
 
 
+    }
+    void OnTriggerStay2D(Collider2D collision)
+	{
+        if (collision.CompareTag("Enemy"))
+        {
+            if (!invincible)
+            {
+                LP -= 1;
+                Hurt();
+            }
+        }
     }
 
     /// <summary>
