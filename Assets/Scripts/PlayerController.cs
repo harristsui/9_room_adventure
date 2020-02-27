@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public bool onLaptop;
     public float speed;
     public GameObject[] HP;
     public GameObject Bullet;
@@ -42,42 +43,58 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Shoot()
     {
-        //shoot in laptop
-        //if (!GameManage.fading && Input.GetButton("Jump"))
-        //{
-        //    Instantiate(Bullet, firePoint.position, transform.rotation);
-        //}
+		//shoot in laptop
+		if (onLaptop)
+		{
+            if (!GameManage.fading && Input.GetButton("Jump"))
+		    {
+			    Instantiate(Bullet, firePoint.position, transform.rotation);
+		    }
+		}
 
-        //shoot in phone
-        if (rightJS.Horizontal != 0 || rightJS.Vertical != 0)
-        {
-            Instantiate(Bullet, firePoint.position, transform.rotation);
-        }
-    }
+		//shoot in phone
+		if (!onLaptop)
+		{
+            if (rightJS.Horizontal != 0 || rightJS.Vertical != 0)
+		    {
+			    Instantiate(Bullet, firePoint.position, transform.rotation);
+		    }
+		}
+		
+	}
 
     // Update is called once per frame
     void Update()
     {
         if (!GameManage.fading)
         {
-            //Player Movement in Laptop
-            //float x = Input.GetAxisRaw("Horizontal");
-            //float y = Input.GetAxisRaw("Vertical");
+			
+			if (onLaptop)
+			{
+                //Player Movement in Laptop
+                float x = Input.GetAxisRaw("Horizontal");
+			    float y = Input.GetAxisRaw("Vertical");
+                rb.velocity = new Vector2(x * speed, y * speed);
 
-            //Player Movement on phone
-            float x = leftJS.Horizontal;
-            float y = leftJS.Vertical;
-            rb.velocity = new Vector2(x * speed, y * speed);
+                //Player Rotation in Laptop
+                Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
+            }
 
-            //Player Rotation in Laptop
-            //Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
 
-            //Player Rotation on
-            //transform.up = new Vector2(rightJS.Horizontal, rightJS.Vertical).normalized;
-            if(rightJS.Horizontal!=0 && rightJS.Vertical != 0)
-            {
-                transform.up = rightJS.Direction.normalized;
+			
+			if (!onLaptop)
+			{
+                //Player Movement on phone
+                float x = leftJS.Horizontal;
+                float y = leftJS.Vertical;
+                rb.velocity = new Vector2(x * speed, y * speed);
+
+                //Player Rotation on phone
+                if (rightJS.Horizontal != 0 && rightJS.Vertical != 0)
+                {
+                    transform.up = rightJS.Direction.normalized;
+                }
             }
         }
         
@@ -117,6 +134,17 @@ public class PlayerController : MonoBehaviour
         }
 
 
+    }
+    void OnTriggerStay2D(Collider2D collision)
+	{
+        if (collision.CompareTag("Enemy"))
+        {
+            if (!invincible)
+            {
+                LP -= 1;
+                Hurt();
+            }
+        }
     }
 
     /// <summary>
