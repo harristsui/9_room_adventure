@@ -21,7 +21,7 @@ public class GameManage : MonoBehaviour
 
     GameObject[] enemies;
     int keyEnemy;
-    bool keyGenerated;
+    //bool keyGenerated;
     bool start;
     Vector2 lastPos;
 
@@ -40,13 +40,13 @@ public class GameManage : MonoBehaviour
         fading = false;
         start = false;
 
-        keyGenerated = false;
+        //keyGenerated = false;
         generate = false;
 
         newRoom = false;
 
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        keyEnemy = Random.Range(0, enemies.Length);
+        //enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        //keyEnemy = Random.Range(0, enemies.Length);
         fade.GetComponent<Image>().color = new Color(0, 0, 0, 1);
 
         currentRoom = new Vector2(0, 0);
@@ -97,6 +97,7 @@ public class GameManage : MonoBehaviour
         #endregion
 
         #region Let Random Enemy Drop Key
+        /*
         if (enemies[keyEnemy])
         {
             lastPos = enemies[keyEnemy].transform.position;
@@ -106,6 +107,7 @@ public class GameManage : MonoBehaviour
             Instantiate(key, lastPos, Quaternion.identity, GameObject.Find("Room" + currentRoom.x + currentRoom.y).transform);
             keyGenerated = true;
         }
+        */
         #endregion
 
         for(int i = 0; i < keyCollected.Length; i++)
