@@ -6,24 +6,16 @@ using UnityEngine.UI;
 
 public class GameManage : MonoBehaviour
 {
-    public static bool generate;
-    public static bool fading;
-
     public static bool newRoom;
 
     public GameObject key;
-    public GameObject fade;
     public GameObject cam;
     public GameObject player;
+    public GameObject goal;
+    public GameObject StartCanvas, PlayCanvas, GameOverCanvas;
 
     [Tooltip("This is the offset between rooms")]
     public float xOffset, yOffset;
-
-    GameObject[] enemies;
-    int keyEnemy;
-    //bool keyGenerated;
-    bool start;
-    Vector2 lastPos;
 
     public static GameObject[] rooms;
     public static bool[] keyCollected;
@@ -34,20 +26,10 @@ public class GameManage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //currently set to false
-        //fading = true;
-        //start = true;
-        fading = false;
-        start = false;
-
-        //keyGenerated = false;
-        generate = false;
-
+        StartCanvas.SetActive(true);
+        PlayCanvas.SetActive(false);
+        GameOverCanvas.SetActive(false);
         newRoom = false;
-
-        //enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        //keyEnemy = Random.Range(0, enemies.Length);
-        fade.GetComponent<Image>().color = new Color(0, 0, 0, 1);
 
         currentRoom = new Vector2(0, 0);
         rooms = GameObject.FindGameObjectsWithTag("Room");
@@ -71,46 +53,28 @@ public class GameManage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if reaches goal, turn on game over canvas
+        if (!goal || PlayerController.LP <= 0)
+        {
+            GameOverCanvas.SetActive(true);
+        }
+
         //currently not in use
-        #region Scene Transition Fade in/out
-        /*
-        if (start)
+        #region Canvas Transition Fade in/out
+
+        if (StartCanvas && Input.anyKeyDown)
         {
-            fade.GetComponent<Image>().color -= new Color(0, 0, 0, Time.deltaTime);
-            fading = true;
-            if (fade.GetComponent<Image>().color.a <= 0)
-            {
-                start = false;
-                fading = false;
-            }
+            StartCanvas.SetActive(false);
+            PlayCanvas.SetActive(true);
         }
-        if (generate)
+        if (StartCanvas && Input.touchCount>0)
         {
-            fade.GetComponent<Image>().color += new Color(0, 0, 0, Time.deltaTime);
-            fading = true;
-            if (fade.GetComponent<Image>().color.a >= 1)
-            {
-                SceneManager.LoadScene("Test");
-            }
+            StartCanvas.SetActive(false);
+            PlayCanvas.SetActive(true);
         }
-        */
         #endregion
 
-        #region Let Random Enemy Drop Key
-        /*
-        if (enemies[keyEnemy])
-        {
-            lastPos = enemies[keyEnemy].transform.position;
-        }
-        if (!enemies[keyEnemy] && !keyGenerated)
-        {
-            Instantiate(key, lastPos, Quaternion.identity, GameObject.Find("Room" + currentRoom.x + currentRoom.y).transform);
-            keyGenerated = true;
-        }
-        */
-        #endregion
-
-        for(int i = 0; i < keyCollected.Length; i++)
+        for (int i = 0; i < keyCollected.Length; i++)
         {
             if (keyCollected[i])
             {

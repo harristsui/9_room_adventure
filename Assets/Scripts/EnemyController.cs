@@ -35,7 +35,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManage.fading && Player)
+        if (Player)
         {
             if (HP <= 0)
             {

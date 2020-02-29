@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 		//shoot in laptop
 		if (onLaptop)
 		{
-            if (!GameManage.fading && Input.GetButton("Jump"))
+            if (Input.GetButton("Jump"))
 		    {
 			    Instantiate(Bullet, firePoint.position, transform.rotation);
 		    }
@@ -66,11 +66,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManage.fading)
+        if (Time.deltaTime > 0)
         {
-			
 			if (onLaptop)
 			{
+                //Disable joysticks
+                leftJS.gameObject.SetActive(false);
+                rightJS.gameObject.SetActive(false);
+
                 //Player Movement in Laptop
                 float x = Input.GetAxisRaw("Horizontal");
 			    float y = Input.GetAxisRaw("Vertical");
@@ -81,8 +84,6 @@ public class PlayerController : MonoBehaviour
                 transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
             }
 
-
-			
 			if (!onLaptop)
 			{
                 //Player Movement on phone
@@ -124,7 +125,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //if collect key, show key UI
+        //if collect key, set bool to true
         if (collision.CompareTag("Key"))
         {
             int n = System.Array.IndexOf(GameManage.rooms, collision.gameObject.transform.parent.gameObject);
@@ -133,7 +134,11 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-
+        //for testing, opens game over canvas in GameManager script
+        if (collision.gameObject.name == "Goal")
+        {
+            Destroy(collision.gameObject);
+        }
     }
     void OnTriggerStay2D(Collider2D collision)
 	{
