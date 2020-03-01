@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
     Collider2D c;
     Rigidbody2D rb;
 
+    //animation
+    Animator anim;
+    SpriteRenderer characterSprite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +40,9 @@ public class PlayerController : MonoBehaviour
         InvokeRepeating("Shoot", 0, fireRate);
 
         playerSource = GetComponent<AudioSource>();
+
+        anim = GetComponent<Animator>();
+        characterSprite = GetComponent<SpriteRenderer>();
     }
 
     /// <summary>
@@ -79,6 +86,38 @@ public class PlayerController : MonoBehaviour
                 //Player Rotation in Laptop
                 Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
+
+                //animation
+                if(y > 0)
+                {
+                    anim.SetBool("isUp", true);
+                } else {
+                    anim.SetBool("isUp", false);
+                }
+
+                if(y < 0)
+                {
+                    anim.SetBool("isDown", true);
+                } else
+                {
+                    anim.SetBool("isDown", false);
+                }
+
+                if(Mathf.Abs(x) > 0)
+                {
+                    anim.SetBool("isHorizontal", true);
+                } else
+                {
+                    anim.SetBool("isHorizontal", false);
+                }
+
+                if(x >= 0)
+                {
+                    characterSprite.flipX = false;
+                } else
+                {
+                    characterSprite.flipX = true;
+                }
             }
 
 
