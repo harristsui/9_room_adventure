@@ -6581,6 +6581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e71f44893c44e658776ffa740c88c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeSpeed: 4
   key: {fileID: 6629559141071267200, guid: ce313a1e223544f4f81da6202523c80a, type: 3}
   cam: {fileID: 885115908}
   player: {fileID: 487141868}

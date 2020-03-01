@@ -113,9 +113,8 @@ public class GameManage : MonoBehaviour
                     if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
                     {
                         rooms[i].SetActive(true);
-                        
-                        previousRoom.SetActive(false);
-                        previousRoom = rooms[i];
+                        //previousRoom.SetActive(false);
+                        //previousRoom = rooms[i];
                     }
                 }
                 moving = true;
@@ -129,8 +128,8 @@ public class GameManage : MonoBehaviour
                     if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
                     {
                         rooms[i].SetActive(true);
-                        previousRoom.SetActive(false);
-                        previousRoom = rooms[i];
+                        //previousRoom.SetActive(false);
+                        //previousRoom = rooms[i];
                     }
                 }
                 moving = true;
@@ -138,7 +137,7 @@ public class GameManage : MonoBehaviour
             }
             
         }
-        Debug.Log(currentRoom);
+
         if (moving)
         {
 
@@ -165,6 +164,7 @@ public class GameManage : MonoBehaviour
 
                         }
                     }
+
                 }
             }
 
@@ -175,6 +175,14 @@ public class GameManage : MonoBehaviour
             cam.transform.position = Vector3.MoveTowards(cam.transform.position, targetPos, 10f * Time.deltaTime);
             if (cam.transform.position == targetPos)
             {
+                for (int i = 0; i < rooms.Length; i++)
+                {
+                    if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
+                    {
+                        previousRoom.SetActive(false);
+                        previousRoom = rooms[i];
+                    }
+                }
                 moving = false;
             }
         }
