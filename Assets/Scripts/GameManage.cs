@@ -68,8 +68,8 @@ public class GameManage : MonoBehaviour
             GameOverCanvas.SetActive(true);
         }
 
-        //currently not in use
-        #region Canvas Transition Fade in/out
+        //Enter the game
+        #region Canvas Transition
         if (StartCanvas && Input.anyKeyDown)
         {
             StartCanvas.SetActive(false);
@@ -92,6 +92,7 @@ public class GameManage : MonoBehaviour
                     {
                         go.GetComponent<SpriteRenderer>().enabled = false;
                         go.GetComponent<Collider2D>().isTrigger = true;
+                        go.GetComponent<Collider2D>().offset = new Vector2(1, 0);
                     }
                 }
             }
@@ -198,6 +199,7 @@ public class GameManage : MonoBehaviour
                         {
                             go.GetComponent<SpriteRenderer>().enabled = true;
                             go.GetComponent<Collider2D>().isTrigger = false;
+                            go.GetComponent<Collider2D>().offset = new Vector2(0, 0);
                         }
                     }
                 }
