@@ -6,24 +6,18 @@ using UnityEngine.UI;
 
 public class GameManage : MonoBehaviour
 {
-    public static bool generate;
-    public static bool fading;
-
     public static bool newRoom;
 
+    public float fadeSpeed;
+
     public GameObject key;
-    public GameObject fade;
     public GameObject cam;
     public GameObject player;
+    public GameObject goal;
+    public GameObject StartCanvas, PlayCanvas, GameOverCanvas;
 
     [Tooltip("This is the offset between rooms")]
     public float xOffset, yOffset;
-
-    GameObject[] enemies;
-    int keyEnemy;
-    //bool keyGenerated;
-    bool start;
-    Vector2 lastPos;
 
     public static GameObject[] rooms;
     public static bool[] keyCollected;
@@ -34,20 +28,10 @@ public class GameManage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //currently set to false
-        //fading = true;
-        //start = true;
-        fading = false;
-        start = false;
-
-        //keyGenerated = false;
-        generate = false;
-
+        StartCanvas.SetActive(true);
+        PlayCanvas.SetActive(false);
+        GameOverCanvas.SetActive(false);
         newRoom = false;
-
-        //enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        //keyEnemy = Random.Range(0, enemies.Length);
-        fade.GetComponent<Image>().color = new Color(0, 0, 0, 1);
 
         currentRoom = new Vector2(0, 0);
         rooms = GameObject.FindGameObjectsWithTag("Room");
@@ -58,6 +42,13 @@ public class GameManage : MonoBehaviour
             keyCollected[i] = false;
             if (rooms[i].name != "Room00")
             {
+                foreach (Transform game in rooms[i].transform)
+                {
+                    if (game.GetComponent<SpriteRenderer>())
+                    {
+                        game.GetComponent<SpriteRenderer>().color = new Color(game.GetComponent<SpriteRenderer>().color.r, game.GetComponent<SpriteRenderer>().color.g, game.GetComponent<SpriteRenderer>().color.b, 0);
+                    }
+                }
                 rooms[i].SetActive(false);
             }
             else
@@ -71,46 +62,27 @@ public class GameManage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //currently not in use
-        #region Scene Transition Fade in/out
-        /*
-        if (start)
+        //if reaches goal, turn on game over canvas
+        if (!goal || PlayerController.LP <= 0)
         {
-            fade.GetComponent<Image>().color -= new Color(0, 0, 0, Time.deltaTime);
-            fading = true;
-            if (fade.GetComponent<Image>().color.a <= 0)
-            {
-                start = false;
-                fading = false;
-            }
+            GameOverCanvas.SetActive(true);
         }
-        if (generate)
+
+        //Enter the game
+        #region Canvas Transition
+        if (StartCanvas && Input.anyKeyDown)
         {
-            fade.GetComponent<Image>().color += new Color(0, 0, 0, Time.deltaTime);
-            fading = true;
-            if (fade.GetComponent<Image>().color.a >= 1)
-            {
-                SceneManager.LoadScene("Test");
-            }
+            StartCanvas.SetActive(false);
+            PlayCanvas.SetActive(true);
         }
-        */
+        if (StartCanvas && Input.touchCount>0)
+        {
+            StartCanvas.SetActive(false);
+            PlayCanvas.SetActive(true);
+        }
         #endregion
 
-        #region Let Random Enemy Drop Key
-        /*
-        if (enemies[keyEnemy])
-        {
-            lastPos = enemies[keyEnemy].transform.position;
-        }
-        if (!enemies[keyEnemy] && !keyGenerated)
-        {
-            Instantiate(key, lastPos, Quaternion.identity, GameObject.Find("Room" + currentRoom.x + currentRoom.y).transform);
-            keyGenerated = true;
-        }
-        */
-        #endregion
-
-        for(int i = 0; i < keyCollected.Length; i++)
+        for (int i = 0; i < keyCollected.Length; i++)
         {
             if (keyCollected[i])
             {
@@ -120,10 +92,13 @@ public class GameManage : MonoBehaviour
                     {
                         go.GetComponent<SpriteRenderer>().enabled = false;
                         go.GetComponent<Collider2D>().isTrigger = true;
+                        go.GetComponent<Collider2D>().offset = new Vector2(1, 0);
                     }
                 }
             }
         }
+
+        
 
         if (newRoom)
         {
@@ -139,8 +114,8 @@ public class GameManage : MonoBehaviour
                     if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
                     {
                         rooms[i].SetActive(true);
-                        previousRoom.SetActive(false);
-                        previousRoom = rooms[i];
+                        //previousRoom.SetActive(false);
+                        //previousRoom = rooms[i];
                     }
                 }
                 moving = true;
@@ -154,8 +129,8 @@ public class GameManage : MonoBehaviour
                     if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
                     {
                         rooms[i].SetActive(true);
-                        previousRoom.SetActive(false);
-                        previousRoom = rooms[i];
+                        //previousRoom.SetActive(false);
+                        //previousRoom = rooms[i];
                     }
                 }
                 moving = true;
@@ -163,7 +138,7 @@ public class GameManage : MonoBehaviour
             }
             
         }
-        //Debug.Log(currentRoom);
+
         if (moving)
         {
 
@@ -179,6 +154,18 @@ public class GameManage : MonoBehaviour
                             go.GetComponent<Collider2D>().isTrigger = true;
                         }
                     }
+                    foreach (Transform game in rooms[i].transform)
+                    {
+                        if (game.GetComponent<SpriteRenderer>())
+                        {
+                            if (game.GetComponent<SpriteRenderer>().color.a < 1)
+                            {
+                                game.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, Time.deltaTime * fadeSpeed);
+                            }
+
+                        }
+                    }
+
                 }
             }
 
@@ -189,6 +176,14 @@ public class GameManage : MonoBehaviour
             cam.transform.position = Vector3.MoveTowards(cam.transform.position, targetPos, 10f * Time.deltaTime);
             if (cam.transform.position == targetPos)
             {
+                for (int i = 0; i < rooms.Length; i++)
+                {
+                    if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
+                    {
+                        previousRoom.SetActive(false);
+                        previousRoom = rooms[i];
+                    }
+                }
                 moving = false;
             }
         }
@@ -204,6 +199,7 @@ public class GameManage : MonoBehaviour
                         {
                             go.GetComponent<SpriteRenderer>().enabled = true;
                             go.GetComponent<Collider2D>().isTrigger = false;
+                            go.GetComponent<Collider2D>().offset = new Vector2(0, 0);
                         }
                     }
                 }

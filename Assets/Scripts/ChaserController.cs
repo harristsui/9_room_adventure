@@ -21,16 +21,15 @@ public class ChaserController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManage.fading)
+        if (HP <= 0)
         {
-            if (HP <= 0)
-            {
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
+        }
+        if (Player)
+        {
             rb.velocity = speed * (Player.transform.position - transform.position);
             transform.up = ((Vector2)Player.transform.position - (Vector2)transform.position).normalized;
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
