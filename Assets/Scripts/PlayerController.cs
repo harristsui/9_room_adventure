@@ -129,7 +129,6 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Key"))
         {
             int n = System.Array.IndexOf(GameManage.rooms, collision.gameObject.transform.parent.gameObject);
-            Debug.Log(n);
             GameManage.keyCollected[n] = true;
             Destroy(collision.gameObject);
         }

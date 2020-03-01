@@ -8,6 +8,8 @@ public class GameManage : MonoBehaviour
 {
     public static bool newRoom;
 
+    public float fadeSpeed;
+
     public GameObject key;
     public GameObject cam;
     public GameObject player;
@@ -40,6 +42,13 @@ public class GameManage : MonoBehaviour
             keyCollected[i] = false;
             if (rooms[i].name != "Room00")
             {
+                foreach (Transform game in rooms[i].transform)
+                {
+                    if (game.GetComponent<SpriteRenderer>())
+                    {
+                        game.GetComponent<SpriteRenderer>().color = new Color(game.GetComponent<SpriteRenderer>().color.r, game.GetComponent<SpriteRenderer>().color.g, game.GetComponent<SpriteRenderer>().color.b, 0);
+                    }
+                }
                 rooms[i].SetActive(false);
             }
             else
@@ -61,7 +70,6 @@ public class GameManage : MonoBehaviour
 
         //currently not in use
         #region Canvas Transition Fade in/out
-
         if (StartCanvas && Input.anyKeyDown)
         {
             StartCanvas.SetActive(false);
@@ -89,6 +97,8 @@ public class GameManage : MonoBehaviour
             }
         }
 
+        
+
         if (newRoom)
         {
             //check which room to fade in and move camera to
@@ -103,6 +113,7 @@ public class GameManage : MonoBehaviour
                     if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
                     {
                         rooms[i].SetActive(true);
+                        
                         previousRoom.SetActive(false);
                         previousRoom = rooms[i];
                     }
@@ -127,7 +138,7 @@ public class GameManage : MonoBehaviour
             }
             
         }
-        //Debug.Log(currentRoom);
+        Debug.Log(currentRoom);
         if (moving)
         {
 
@@ -141,6 +152,17 @@ public class GameManage : MonoBehaviour
                         {
                             go.GetComponent<SpriteRenderer>().enabled = false;
                             go.GetComponent<Collider2D>().isTrigger = true;
+                        }
+                    }
+                    foreach (Transform game in rooms[i].transform)
+                    {
+                        if (game.GetComponent<SpriteRenderer>())
+                        {
+                            if (game.GetComponent<SpriteRenderer>().color.a < 1)
+                            {
+                                game.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, Time.deltaTime * fadeSpeed);
+                            }
+
                         }
                     }
                 }

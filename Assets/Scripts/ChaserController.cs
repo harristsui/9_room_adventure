@@ -25,8 +25,11 @@ public class ChaserController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        rb.velocity = speed * (Player.transform.position - transform.position);
-        transform.up = ((Vector2)Player.transform.position - (Vector2)transform.position).normalized;
+        if (Player)
+        {
+            rb.velocity = speed * (Player.transform.position - transform.position);
+            transform.up = ((Vector2)Player.transform.position - (Vector2)transform.position).normalized;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
