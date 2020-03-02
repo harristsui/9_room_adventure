@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(Bullet, firePoint.position, transform.rotation);
             playerSource.PlayOneShot(playerLaser);
+            playerSource.pitch = Random.Range(.85f, 1.15f);
         }
         #endif
     }
