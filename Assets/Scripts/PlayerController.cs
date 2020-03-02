@@ -10,6 +10,18 @@ public class PlayerController : MonoBehaviour
     public Transform firePoint;
     public float fireRate;
 
+    public AudioClip KeyGet; //done
+
+    public AudioClip Run; //done
+
+    public AudioClip playerLaser; //done
+
+    public AudioClip Ouch; //Done
+    
+    public AudioClip WeaponGet; //In Progress, tentative to change
+
+    //public AudioClip HealthUp;
+
     public FloatingJoystick leftJS, rightJS;
 
     AudioSource playerSource;
@@ -54,12 +66,14 @@ public class PlayerController : MonoBehaviour
         if (rightJS.Horizontal != 0 || rightJS.Vertical != 0)
 		{
 			Instantiate(Bullet, firePoint.position, transform.rotation);
+            playerSource.PlayOneShot(playerLaser);
 		}
         #else
         //shoot in laptop
         if (Input.GetButton("Jump"))
         {
             Instantiate(Bullet, firePoint.position, transform.rotation);
+            playerSource.PlayOneShot(playerLaser);
         }
         #endif
     }
@@ -80,6 +94,7 @@ public class PlayerController : MonoBehaviour
                 if (rightJS.Horizontal != 0 && rightJS.Vertical != 0)
                 {
                     transform.up = rightJS.Direction.normalized;
+                    playerSource.PlayOneShot(Run);
                 }
            
             #else
@@ -148,6 +163,7 @@ public class PlayerController : MonoBehaviour
             {
                 LP -= 1;
                 Hurt();
+                playerSource.PlayOneShot(Ouch);
             }
             
         }
@@ -158,6 +174,7 @@ public class PlayerController : MonoBehaviour
             {
                 LP -= 1;
                 Hurt();
+                playerSource.PlayOneShot(Ouch);
             }
         }
 
@@ -166,6 +183,7 @@ public class PlayerController : MonoBehaviour
         {
             int n = System.Array.IndexOf(GameManage.rooms, collision.gameObject.transform.parent.gameObject);
             GameManage.keyCollected[n] = true;
+            playerSource.PlayOneShot(KeyGet);
             Destroy(collision.gameObject);
         }
 
@@ -183,6 +201,7 @@ public class PlayerController : MonoBehaviour
             {
                 LP -= 1;
                 Hurt();
+                playerSource.PlayOneShot(Ouch);
             }
         }
     }
