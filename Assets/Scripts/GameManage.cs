@@ -16,6 +16,8 @@ public class GameManage : MonoBehaviour
     public GameObject goal;
     public GameObject StartCanvas, PlayCanvas, GameOverCanvas;
 
+    public Vector2 doorColliderOffset;
+
     [Tooltip("This is the offset between rooms")]
     public float xOffset, yOffset;
 
@@ -92,7 +94,7 @@ public class GameManage : MonoBehaviour
                     {
                         go.GetComponent<SpriteRenderer>().enabled = false;
                         go.GetComponent<Collider2D>().isTrigger = true;
-                        go.GetComponent<Collider2D>().offset = new Vector2(1, 0);
+                        go.GetComponent<Collider2D>().offset = doorColliderOffset;
                     }
                 }
             }
