@@ -3,7 +3,12 @@ guid: 7fa63dd87301a4d64893dd1be947b9bf
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Bullet: {instanceID: 0}
+  - firePoint: {instanceID: 0}
+  - KeyGet: {fileID: 8300000, guid: 5aed32c321beb4d36b5968b6757751a7, type: 3}
+  - leftJS: {instanceID: 0}
+  - rightJS: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
