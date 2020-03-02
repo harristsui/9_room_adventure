@@ -22,6 +22,10 @@ public class PlayerController : MonoBehaviour
     Collider2D c;
     Rigidbody2D rb;
 
+    //animation
+    Animator anim;
+    SpriteRenderer characterSprite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +40,9 @@ public class PlayerController : MonoBehaviour
         InvokeRepeating("Shoot", 0, fireRate);
 
         playerSource = GetComponent<AudioSource>();
+
+        anim = GetComponent<Animator>();
+        characterSprite = GetComponent<SpriteRenderer>();
     }
 
     /// <summary>
@@ -46,7 +53,7 @@ public class PlayerController : MonoBehaviour
 		//shoot in laptop
 		if (onLaptop)
 		{
-            if (!GameManage.fading && Input.GetButton("Jump"))
+            if (Input.GetButton("Jump"))
 		    {
 			    Instantiate(Bullet, firePoint.position, transform.rotation);
 		    }
@@ -66,11 +73,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManage.fading)
+        if (Time.deltaTime > 0)
         {
-			
 			if (onLaptop)
 			{
+                //Disable joysticks
+                leftJS.gameObject.SetActive(false);
+                rightJS.gameObject.SetActive(false);
+
                 //Player Movement in Laptop
                 float x = Input.GetAxisRaw("Horizontal");
 			    float y = Input.GetAxisRaw("Vertical");
@@ -79,10 +89,40 @@ public class PlayerController : MonoBehaviour
                 //Player Rotation in Laptop
                 Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
+
+                //animation
+                if(y > 0)
+                {
+                    anim.SetBool("isUp", true);
+                } else {
+                    anim.SetBool("isUp", false);
+                }
+
+                if(y < 0)
+                {
+                    anim.SetBool("isDown", true);
+                } else
+                {
+                    anim.SetBool("isDown", false);
+                }
+
+                if(Mathf.Abs(x) > 0)
+                {
+                    anim.SetBool("isHorizontal", true);
+                } else
+                {
+                    anim.SetBool("isHorizontal", false);
+                }
+
+                if(x >= 0)
+                {
+                    characterSprite.flipX = false;
+                } else
+                {
+                    characterSprite.flipX = true;
+                }
             }
 
-
-			
 			if (!onLaptop)
 			{
                 //Player Movement on phone
@@ -124,16 +164,19 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        //if collect key, show key UI
+        //if collect key, set bool to true
         if (collision.CompareTag("Key"))
         {
             int n = System.Array.IndexOf(GameManage.rooms, collision.gameObject.transform.parent.gameObject);
-            Debug.Log(n);
             GameManage.keyCollected[n] = true;
             Destroy(collision.gameObject);
         }
 
-
+        //for testing, opens game over canvas in GameManager script
+        if (collision.gameObject.name == "Goal")
+        {
+            Destroy(collision.gameObject);
+        }
     }
     void OnTriggerStay2D(Collider2D collision)
 	{

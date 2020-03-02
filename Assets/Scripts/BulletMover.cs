@@ -20,14 +20,14 @@ public class BulletMover : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Wall"))
+        if (collision.CompareTag("Wall") || collision.CompareTag("Door"))
         {
             Destroy(gameObject);
         }
     }
 
-    //void OnBecameInvisible()
-    //{
-    //    Destroy(gameObject);
-    //}
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }
