@@ -83,22 +83,24 @@ public class PlayerController : MonoBehaviour
     {
         if (Time.deltaTime > 0)
         {
-
             #if UNITY_ANDROID && !UNITY_EDITOR
             //Player Movement on phone
             float x = leftJS.Horizontal;
-                float y = leftJS.Vertical;
-                rb.velocity = new Vector2(x * speed, y * speed);
+            float y = leftJS.Vertical;
+            if (x != 0 || y != 0)
+            {
+                rb.velocity = new Vector2(Mathf.Sign(x)*Mathf.Clamp(Mathf.Abs(x * speed),1f,speed), Mathf.Sign(y)*Mathf.Clamp(Mathf.Abs(y * speed),1f,speed));
+            }
+            
 
-                //Player Rotation on phone
-                if (rightJS.Horizontal != 0 && rightJS.Vertical != 0)
-                {
-                    transform.up = rightJS.Direction.normalized;
-                    playerSource.PlayOneShot(Run);
-                }
+            //Player Rotation on phone
+            if (rightJS.Horizontal != 0 && rightJS.Vertical != 0)
+            {
+                transform.up = rightJS.Direction.normalized;
+                playerSource.PlayOneShot(Run);
+            }
            
             #else
-
             //Disable joysticks
             leftJS.gameObject.SetActive(false);
             rightJS.gameObject.SetActive(false);
@@ -181,7 +183,8 @@ public class PlayerController : MonoBehaviour
         //if collect key, set bool to true
         if (collision.CompareTag("Key"))
         {
-            int n = System.Array.IndexOf(GameManage.rooms, collision.gameObject.transform.parent.gameObject);
+            //int n = System.Array.IndexOf(GameManage.rooms, collision.gameObject.transform.parent.gameObject);
+            int n = GameManage.rooms.IndexOf(collision.gameObject.transform.parent.gameObject);
             GameManage.keyCollected[n] = true;
             playerSource.PlayOneShot(KeyGet);
             Destroy(collision.gameObject);

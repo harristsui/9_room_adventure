@@ -9667,7 +9667,7 @@ GameObject:
   - component: {fileID: 741236959}
   m_Layer: 0
   m_Name: Room34
-  m_TagString: Room
+  m_TagString: LargeRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12220,7 +12220,7 @@ GameObject:
   - component: {fileID: 984840540}
   m_Layer: 0
   m_Name: Room22
-  m_TagString: Room
+  m_TagString: LRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16822,7 +16822,7 @@ GameObject:
   - component: {fileID: 1405333563}
   m_Layer: 0
   m_Name: Room71
-  m_TagString: Room
+  m_TagString: LargeRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22280,6 +22280,11 @@ MonoBehaviour:
   Bullet: {fileID: 1660886739134225091, guid: b2095b0e9d2ee40d6b9fc908885668a1, type: 3}
   firePoint: {fileID: 1269605363}
   fireRate: 0.2
+  KeyGet: {fileID: 8300000, guid: 5aed32c321beb4d36b5968b6757751a7, type: 3}
+  Run: {fileID: 8300000, guid: 5b13d8a5f10b342a4bdc372000252546, type: 3}
+  playerLaser: {fileID: 8300000, guid: 8faa3d483d25b4bcab3fd286b9bc4ea5, type: 3}
+  Ouch: {fileID: 8300000, guid: a15dfb1e9ed43475092a046a1b6fa089, type: 3}
+  WeaponGet: {fileID: 8300000, guid: 9f03606b2f423435f92a7c80b9497852, type: 3}
   leftJS: {fileID: 1661790763}
   rightJS: {fileID: 1529424372}
 --- !u!50 &1862213084
@@ -23421,7 +23426,7 @@ GameObject:
   - component: {fileID: 1927391605}
   m_Layer: 0
   m_Name: Room41
-  m_TagString: Room
+  m_TagString: LRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25031,7 +25036,7 @@ GameObject:
   - component: {fileID: 2069318361}
   m_Layer: 0
   m_Name: Room5-1
-  m_TagString: Room
+  m_TagString: LargeRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -21,7 +21,8 @@ public class GameManage : MonoBehaviour
     [Tooltip("This is the offset between rooms")]
     public float xOffset, yOffset;
 
-    public static GameObject[] rooms;
+    GameObject[] regularRooms, LRooms, largeRooms;
+    public static List<GameObject> rooms;
     public static bool[] keyCollected;
     Vector2 currentRoom;
     public static bool moving;
@@ -36,10 +37,19 @@ public class GameManage : MonoBehaviour
         newRoom = false;
 
         currentRoom = new Vector2(0, 0);
-        rooms = GameObject.FindGameObjectsWithTag("Room");
+
+        regularRooms = GameObject.FindGameObjectsWithTag("Room");
+        LRooms = GameObject.FindGameObjectsWithTag("LRoom");
+        largeRooms = GameObject.FindGameObjectsWithTag("LargeRoom");
+        rooms = new List<GameObject>();
+        rooms.AddRange(regularRooms);
+        rooms.AddRange(LRooms);
+        rooms.AddRange(largeRooms);
+        Debug.Log(rooms.Count);
+        Debug.Log(regularRooms.Length);
         
-        keyCollected = new bool[rooms.Length];
-        for(int i = 0; i < rooms.Length; i++)
+        keyCollected = new bool[rooms.Count];
+        for(int i = 0; i < rooms.Count; i++)
         {
             keyCollected[i] = false;
             if (rooms[i].name != "Room00")
@@ -88,9 +98,9 @@ public class GameManage : MonoBehaviour
         {
             if (keyCollected[i])
             {
-                foreach(Transform go in rooms[i].transform)
+                foreach (Transform go in rooms[i].transform)
                 {
-                 if (go.tag == "Door")
+                    if (go.tag == "Door")
                     {
                         go.GetComponent<SpriteRenderer>().enabled = false;
                         go.GetComponent<Collider2D>().isTrigger = true;
@@ -100,7 +110,7 @@ public class GameManage : MonoBehaviour
             }
         }
 
-        
+
 
         if (newRoom)
         {
@@ -111,7 +121,7 @@ public class GameManage : MonoBehaviour
             if (Mathf.Abs(xdiff) < Mathf.Abs(ydiff))
             {
                 currentRoom += new Vector2(1 * Mathf.Sign(ydiff), 0);
-                for(int i = 0; i < rooms.Length; i++)
+                for(int i = 0; i < rooms.Count; i++)
                 {
                     if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
                     {
@@ -126,7 +136,7 @@ public class GameManage : MonoBehaviour
             else
             {
                 currentRoom += new Vector2(0, 1 * Mathf.Sign(xdiff));
-                for (int i = 0; i < rooms.Length; i++)
+                for (int i = 0; i < rooms.Count; i++)
                 {
                     if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
                     {
@@ -144,7 +154,7 @@ public class GameManage : MonoBehaviour
         if (moving)
         {
 
-            for (int i = 0; i < rooms.Length; i++)
+            for (int i = 0; i < rooms.Count; i++)
             {
                 if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
                 {
@@ -178,7 +188,7 @@ public class GameManage : MonoBehaviour
             cam.transform.position = Vector3.MoveTowards(cam.transform.position, targetPos, 10f * Time.deltaTime);
             if (cam.transform.position == targetPos)
             {
-                for (int i = 0; i < rooms.Length; i++)
+                for (int i = 0; i < rooms.Count; i++)
                 {
                     if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
                     {
@@ -191,7 +201,7 @@ public class GameManage : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < rooms.Length; i++)
+            for (int i = 0; i < rooms.Count; i++)
             {
                 if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
                 {

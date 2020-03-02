@@ -4888,6 +4888,11 @@ MonoBehaviour:
   Bullet: {fileID: 1660886739134225091, guid: b2095b0e9d2ee40d6b9fc908885668a1, type: 3}
   firePoint: {fileID: 1853731654}
   fireRate: 0.2
+  KeyGet: {fileID: 8300000, guid: 5aed32c321beb4d36b5968b6757751a7, type: 3}
+  Run: {fileID: 8300000, guid: 5b13d8a5f10b342a4bdc372000252546, type: 3}
+  playerLaser: {fileID: 8300000, guid: 8faa3d483d25b4bcab3fd286b9bc4ea5, type: 3}
+  Ouch: {fileID: 8300000, guid: a15dfb1e9ed43475092a046a1b6fa089, type: 3}
+  WeaponGet: {fileID: 8300000, guid: 9f03606b2f423435f92a7c80b9497852, type: 3}
   leftJS: {fileID: 684503113}
   rightJS: {fileID: 232069014}
 --- !u!50 &487141870
