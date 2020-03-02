@@ -697,7 +697,7 @@ Transform:
   m_LocalScale: {x: 0.63243675, y: 0.60975, z: 1.2195}
   m_Children: []
   m_Father: {fileID: 1405333563}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &90997479
 SpriteRenderer:
@@ -743,7 +743,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 29.92, y: 29.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1200,7 +1200,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1236,7 +1236,7 @@ Transform:
   m_LocalScale: {x: 10.066323, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 552581884}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &119681396
 BoxCollider2D:
@@ -1907,7 +1907,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1942,7 +1942,7 @@ Transform:
   m_LocalScale: {x: 0.63243675, y: 0.60975, z: 1.2195}
   m_Children: []
   m_Father: {fileID: 741236959}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &168665666
 SpriteRenderer:
@@ -1988,7 +1988,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 29.92, y: 29.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2919,7 +2919,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3214,11 +3214,11 @@ Transform:
   - {fileID: 1083360333}
   - {fileID: 196446070}
   - {fileID: 1740034255}
-  - {fileID: 436126502}
   - {fileID: 1611761646}
   - {fileID: 1377341382}
   - {fileID: 299866970}
   - {fileID: 1136194897}
+  - {fileID: 436126502}
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3359,7 +3359,7 @@ Transform:
   m_LocalScale: {x: 4.049122, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1405333563}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &283458097
 BoxCollider2D:
@@ -3505,7 +3505,7 @@ Transform:
   m_LocalScale: {x: 0.587435, y: 0.587435, z: 0.587435}
   m_Children: []
   m_Father: {fileID: 274754523}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &299866971
 MonoBehaviour:
@@ -3923,7 +3923,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4320,7 +4320,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4401,7 +4401,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 29.92, y: 29.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4816,7 +4816,7 @@ Transform:
   m_LocalScale: {x: 19.925024, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1082071488}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &373730603
 BoxCollider2D:
@@ -5892,7 +5892,7 @@ Transform:
   m_LocalScale: {x: 10.066323, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1115177569}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &477480546
 BoxCollider2D:
@@ -6592,7 +6592,7 @@ Transform:
   m_LocalScale: {x: 19.474865, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1927391605}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &515998335
 BoxCollider2D:
@@ -6913,7 +6913,7 @@ Transform:
   m_LocalScale: {x: 10.066323, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1927391605}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &531329393
 BoxCollider2D:
@@ -7172,7 +7172,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7317,11 +7317,11 @@ Transform:
   - {fileID: 4641226}
   - {fileID: 496708915}
   - {fileID: 612874760}
-  - {fileID: 368964786}
   - {fileID: 1054498045}
   - {fileID: 1316925232}
   - {fileID: 1260294810}
   - {fileID: 119681395}
+  - {fileID: 368964786}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7727,7 +7727,7 @@ Transform:
   m_LocalScale: {x: 4.049122, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 601932996}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &588262041
 BoxCollider2D:
@@ -7839,8 +7839,8 @@ Transform:
   - {fileID: 1497634087}
   - {fileID: 214554428}
   - {fileID: 227797795}
-  - {fileID: 253483785}
   - {fileID: 588262040}
+  - {fileID: 253483785}
   - {fileID: 1729536044}
   - {fileID: 100314948}
   m_Father: {fileID: 0}
@@ -8135,7 +8135,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -8418,7 +8418,7 @@ Transform:
   m_LocalScale: {x: 27.68964, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1927391605}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &644521468
 BoxCollider2D:
@@ -8779,7 +8779,7 @@ Transform:
   m_LocalScale: {x: 8.82679, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1115177569}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &654879142
 BoxCollider2D:
@@ -9423,7 +9423,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 29.92, y: 29.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9459,7 +9459,7 @@ Transform:
   m_LocalScale: {x: 3.9941347, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1927391605}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &704641726
 BoxCollider2D:
@@ -9691,8 +9691,8 @@ Transform:
   - {fileID: 1976938885}
   - {fileID: 386305912}
   - {fileID: 1537219259}
-  - {fileID: 105331253}
   - {fileID: 168665665}
+  - {fileID: 105331253}
   - {fileID: 482070555}
   - {fileID: 1094070579}
   - {fileID: 1351986259}
@@ -10083,7 +10083,7 @@ Transform:
   m_LocalScale: {x: 12.896453, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1082071488}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &774784472
 BoxCollider2D:
@@ -10531,7 +10531,7 @@ Transform:
   m_LocalScale: {x: 10.066323, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 984840540}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &790519742
 BoxCollider2D:
@@ -10683,7 +10683,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -10839,7 +10839,7 @@ Transform:
   m_LocalScale: {x: 8.82679, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1927391605}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &818728921
 BoxCollider2D:
@@ -11141,7 +11141,7 @@ Transform:
   m_LocalScale: {x: 13.034123, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1405333563}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &843634834
 BoxCollider2D:
@@ -11609,7 +11609,7 @@ Transform:
   m_LocalScale: {x: 0.619506, y: 0.60975, z: 1.2195}
   m_Children: []
   m_Father: {fileID: 984840540}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &967754743
 SpriteRenderer:
@@ -11655,7 +11655,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 29.92, y: 29.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -11799,7 +11799,7 @@ Transform:
   m_LocalScale: {x: 0.58744025, y: 0.58744025, z: 0.58744}
   m_Children: []
   m_Father: {fileID: 1082071488}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &973696486
 MonoBehaviour:
@@ -12241,11 +12241,11 @@ Transform:
   - {fileID: 350612190}
   - {fileID: 1905339213}
   - {fileID: 1214425874}
-  - {fileID: 1389338913}
   - {fileID: 790519741}
   - {fileID: 967754742}
   - {fileID: 2102349256}
   - {fileID: 1629555643}
+  - {fileID: 1389338913}
   - {fileID: 670621495}
   - {fileID: 1641216166}
   - {fileID: 813467702}
@@ -12394,7 +12394,7 @@ Transform:
   m_LocalScale: {x: 0.58744025, y: 0.58744025, z: 0.58744}
   m_Children: []
   m_Father: {fileID: 1405333563}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &995911907
 MonoBehaviour:
@@ -12856,7 +12856,7 @@ Transform:
   m_LocalScale: {x: 8.82679, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 552581884}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1054498046
 BoxCollider2D:
@@ -13513,11 +13513,11 @@ Transform:
   - {fileID: 1251298521}
   - {fileID: 1107813680}
   - {fileID: 348664711}
-  - {fileID: 1981200635}
   - {fileID: 774784471}
   - {fileID: 973696485}
   - {fileID: 1200350746}
   - {fileID: 373730602}
+  - {fileID: 1981200635}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13778,7 +13778,7 @@ Transform:
   m_LocalScale: {x: 8.82679, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2069318361}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1094858562
 BoxCollider2D:
@@ -13994,11 +13994,11 @@ Transform:
   - {fileID: 338722916}
   - {fileID: 931246367}
   - {fileID: 1446614004}
-  - {fileID: 1693989793}
   - {fileID: 477480545}
   - {fileID: 654879141}
   - {fileID: 1863335257}
   - {fileID: 1797826962}
+  - {fileID: 1693989793}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14032,7 +14032,7 @@ Transform:
   m_LocalScale: {x: 8.82679, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 274754523}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1136194898
 BoxCollider2D:
@@ -14291,7 +14291,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 29.92, y: 29.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -14327,7 +14327,7 @@ Transform:
   m_LocalScale: {x: 4.049122, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1082071488}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1200350747
 BoxCollider2D:
@@ -14663,7 +14663,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -14744,7 +14744,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -15007,7 +15007,7 @@ Transform:
   m_LocalScale: {x: 8.82679, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 552581884}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1260294811
 BoxCollider2D:
@@ -15288,7 +15288,7 @@ Transform:
   m_LocalScale: {x: 0.58744025, y: 0.58744025, z: 0.58744}
   m_Children: []
   m_Father: {fileID: 2069318361}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1289726289
 MonoBehaviour:
@@ -15572,7 +15572,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -15863,7 +15863,7 @@ Transform:
   m_LocalScale: {x: 0.587435, y: 0.587435, z: 0.587435}
   m_Children: []
   m_Father: {fileID: 552581884}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1316925233
 MonoBehaviour:
@@ -16659,7 +16659,7 @@ Transform:
   m_LocalScale: {x: 8.82679, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 274754523}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1377341383
 BoxCollider2D:
@@ -16843,11 +16843,11 @@ Transform:
   - {fileID: 1081866896}
   - {fileID: 941612028}
   - {fileID: 1190877088}
-  - {fileID: 2090082855}
   - {fileID: 90997478}
   - {fileID: 843634833}
   - {fileID: 995911906}
   - {fileID: 283458096}
+  - {fileID: 2090082855}
   - {fileID: 1706677047}
   - {fileID: 224914008}
   - {fileID: 1308547840}
@@ -17036,7 +17036,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -17753,7 +17753,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18371,7 +18371,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 29.92, y: 29.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -18784,7 +18784,7 @@ Transform:
   m_LocalScale: {x: 10.066323, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 274754523}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1611761647
 BoxCollider2D:
@@ -19012,7 +19012,7 @@ Transform:
   m_LocalScale: {x: 0.58744025, y: 0.58744025, z: 0.58744}
   m_Children: []
   m_Father: {fileID: 984840540}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1629555644
 MonoBehaviour:
@@ -19250,7 +19250,7 @@ Transform:
   m_LocalScale: {x: 0.619506, y: 0.60975, z: 1.2195}
   m_Children: []
   m_Father: {fileID: 1927391605}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1640450436
 SpriteRenderer:
@@ -19296,7 +19296,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 29.92, y: 29.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -19546,7 +19546,7 @@ Transform:
   m_LocalScale: {x: 12.8808, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2069318361}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1659941141
 BoxCollider2D:
@@ -20924,7 +20924,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -21391,7 +21391,7 @@ Transform:
   m_LocalScale: {x: 8.82679, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1115177569}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1797826963
 BoxCollider2D:
@@ -22091,7 +22091,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 30, y: 15.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -22472,7 +22472,7 @@ Transform:
   m_LocalScale: {x: 0.587435, y: 0.587435, z: 0.587435}
   m_Children: []
   m_Father: {fileID: 1115177569}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1863335258
 MonoBehaviour:
@@ -23227,7 +23227,7 @@ Transform:
   m_LocalScale: {x: 3.9923742, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2069318361}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &1915209508
 BoxCollider2D:
@@ -23439,7 +23439,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1297486305}
-  - {fileID: 2112298495}
   - {fileID: 531329392}
   - {fileID: 515998334}
   - {fileID: 1640450435}
@@ -23448,6 +23447,7 @@ Transform:
   - {fileID: 644521467}
   - {fileID: 704641725}
   - {fileID: 2081712899}
+  - {fileID: 2112298495}
   - {fileID: 425625228}
   - {fileID: 1677615535}
   - {fileID: 709201721}
@@ -23934,7 +23934,7 @@ Transform:
   m_LocalScale: {x: 0.63243675, y: 0.60975, z: 1.2195}
   m_Children: []
   m_Father: {fileID: 2069318361}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1972598674
 SpriteRenderer:
@@ -23980,7 +23980,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 30.000002, y: 15.640001}
+  m_Size: {x: 29.92, y: 29.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -24212,7 +24212,7 @@ Transform:
   m_LocalScale: {x: 0.58744, y: 0.58744, z: 0.58744}
   m_Children: []
   m_Father: {fileID: 1927391605}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1994096791
 BoxCollider2D:
@@ -25052,12 +25052,12 @@ Transform:
   - {fileID: 1758567689}
   - {fileID: 276458680}
   - {fileID: 699106629}
-  - {fileID: 503097990}
   - {fileID: 1972598673}
   - {fileID: 1659941140}
   - {fileID: 1289726288}
   - {fileID: 1915209507}
   - {fileID: 1094858561}
+  - {fileID: 503097990}
   - {fileID: 1847933439}
   - {fileID: 304816599}
   - {fileID: 1754220853}
@@ -25097,7 +25097,7 @@ Transform:
   m_LocalScale: {x: 0.587435, y: 0.587435, z: 0.587435}
   m_Children: []
   m_Father: {fileID: 1927391605}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &2081712900
 MonoBehaviour:
@@ -25398,7 +25398,7 @@ Transform:
   m_LocalScale: {x: 4.049122, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 984840540}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &2102349257
 BoxCollider2D:
