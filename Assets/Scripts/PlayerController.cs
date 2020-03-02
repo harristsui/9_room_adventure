@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool onLaptop;
     public float speed;
     public GameObject[] HP;
     public GameObject Bullet;
@@ -50,83 +49,30 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Shoot()
     {
-		//shoot in laptop
-		if (onLaptop)
-		{
-            if (Input.GetButton("Jump"))
-		    {
-			    Instantiate(Bullet, firePoint.position, transform.rotation);
-		    }
-		}
-
+        #if UNITY_ANDROID && !UNITY_EDITOR
 		//shoot in phone
-		if (!onLaptop)
+        if (rightJS.Horizontal != 0 || rightJS.Vertical != 0)
 		{
-            if (rightJS.Horizontal != 0 || rightJS.Vertical != 0)
-		    {
-			    Instantiate(Bullet, firePoint.position, transform.rotation);
-		    }
+			Instantiate(Bullet, firePoint.position, transform.rotation);
 		}
-		
-	}
+        #else
+        //shoot in laptop
+        if (Input.GetButton("Jump"))
+        {
+            Instantiate(Bullet, firePoint.position, transform.rotation);
+        }
+        #endif
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (Time.deltaTime > 0)
         {
-			if (onLaptop)
-			{
-                //Disable joysticks
-                leftJS.gameObject.SetActive(false);
-                rightJS.gameObject.SetActive(false);
 
-                //Player Movement in Laptop
-                float x = Input.GetAxisRaw("Horizontal");
-			    float y = Input.GetAxisRaw("Vertical");
-                rb.velocity = new Vector2(x * speed, y * speed);
-
-                //Player Rotation in Laptop
-                Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
-
-                //animation
-                if(y > 0)
-                {
-                    anim.SetBool("isUp", true);
-                } else {
-                    anim.SetBool("isUp", false);
-                }
-
-                if(y < 0)
-                {
-                    anim.SetBool("isDown", true);
-                } else
-                {
-                    anim.SetBool("isDown", false);
-                }
-
-                if(Mathf.Abs(x) > 0)
-                {
-                    anim.SetBool("isHorizontal", true);
-                } else
-                {
-                    anim.SetBool("isHorizontal", false);
-                }
-
-                if(x >= 0)
-                {
-                    characterSprite.flipX = false;
-                } else
-                {
-                    characterSprite.flipX = true;
-                }
-            }
-
-			if (!onLaptop)
-			{
-                //Player Movement on phone
-                float x = leftJS.Horizontal;
+            #if UNITY_ANDROID && !UNITY_EDITOR
+            //Player Movement on phone
+            float x = leftJS.Horizontal;
                 float y = leftJS.Vertical;
                 rb.velocity = new Vector2(x * speed, y * speed);
 
@@ -135,11 +81,62 @@ public class PlayerController : MonoBehaviour
                 {
                     transform.up = rightJS.Direction.normalized;
                 }
-            }
-        }
-        
-    }
+           
+            #else
 
+            //Disable joysticks
+            leftJS.gameObject.SetActive(false);
+            rightJS.gameObject.SetActive(false);
+
+            //Player Movement in Laptop
+            float x = Input.GetAxisRaw("Horizontal");
+            float y = Input.GetAxisRaw("Vertical");
+            rb.velocity = new Vector2(x * speed, y * speed);
+
+            //Player Rotation in Laptop
+            Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
+
+            //animation
+            if (y > 0)
+            {
+                anim.SetBool("isUp", true);
+            }
+            else
+            {
+                anim.SetBool("isUp", false);
+            }
+
+            if (y < 0)
+            {
+                anim.SetBool("isDown", true);
+            }
+            else
+            {
+                anim.SetBool("isDown", false);
+            }
+
+            if (Mathf.Abs(x) > 0)
+            {
+                anim.SetBool("isHorizontal", true);
+            }
+            else
+            {
+                anim.SetBool("isHorizontal", false);
+            }
+
+            if (x >= 0)
+            {
+                characterSprite.flipX = false;
+            }
+            else
+            {
+                characterSprite.flipX = true;
+            }
+            #endif
+
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
