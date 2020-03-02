@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 5760202260919997367
     second: BackGround_0
+  - first:
+      213: 8382914639024291461
+    second: BackGround_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -141,6 +144,27 @@ TextureImporter:
       bones: []
       spriteID: 266830045e76f47bb933bc50457f56f0
       internalID: 5760202260919997367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackGround_1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 2992
+        height: 2998
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5068861d12d468ab1a7b86be634b1c
+      internalID: 8382914639024291461
       vertices: []
       indices: 
       edges: []
