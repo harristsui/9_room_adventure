@@ -3,7 +3,12 @@ guid: 16e426f9332ed402fa555709b81356a6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bullet: {instanceID: 0}
+  - EnemyHurt: {fileID: 8300000, guid: d4ecf5959520d401fa7b6545db50c437, type: 3}
+  - EnemyDied: {fileID: 8300000, guid: df5810ef36b0a4adaaa931e6edb3b330, type: 3}
+  - EnemyFiring: {fileID: 8300000, guid: 4bc2c83be368243c29f3d329b5339530, type: 3}
+  - EnemyCollide: {fileID: 8300000, guid: a5a7299b73b2e43bdba720228b3ebacb, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

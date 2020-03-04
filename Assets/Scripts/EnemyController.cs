@@ -11,6 +11,14 @@ public class EnemyController : MonoBehaviour
     public float HP;
     public GameObject bullet;
 
+    public AudioClip EnemyHurt;
+    public AudioClip EnemyDied;
+    public AudioClip EnemyFiring;
+
+    public AudioClip EnemyCollide;
+
+    private AudioSource shootSource;
+
     GameObject Player;
     GameObject[] bullets;
     int chase;
@@ -30,6 +38,7 @@ public class EnemyController : MonoBehaviour
         timer = 0;
         oldPos = transform.position;
         fired = false;
+        shootSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -87,6 +96,7 @@ public class EnemyController : MonoBehaviour
         {
             yield return new WaitForSeconds(.2f);
             Instantiate(bullet, transform.position, transform.rotation);
+            shootSource.PlayOneShot(EnemyFiring);
         }
     }
 
@@ -95,6 +105,7 @@ public class EnemyController : MonoBehaviour
         if (collision.CompareTag("PlayerBullet"))
         {
             Destroy(collision.gameObject);
+            shootSource.PlayOneShot(EnemyCollide);
             HP--;
         }
     }

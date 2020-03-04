@@ -24,6 +24,7 @@ public class PlayerDied : MonoBehaviour
         if (PlayerController.LP == 0 && !died)
         {
             aud.PlayOneShot(dieSound);
+            aud.volume = .2f;
             died = true;
         }
     }

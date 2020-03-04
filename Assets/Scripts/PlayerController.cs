@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
 		{
 			Instantiate(Bullet, firePoint.position, transform.rotation);
             playerSource.PlayOneShot(playerLaser);
+            playerLaser.pitch = Random.Range(0.1f, 0.9f);
 		}
         #else
         //shoot in laptop
@@ -178,6 +179,7 @@ public class PlayerController : MonoBehaviour
                 LP -= 1;
                 Hurt();
                 playerSource.PlayOneShot(Ouch);
+                playerSource.volume = .9f;
             }
         }
 
