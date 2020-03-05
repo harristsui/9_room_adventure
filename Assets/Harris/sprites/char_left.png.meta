@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: c83a4901669ce9145bdbf7fbcb7b1324
+guid: a7f45d777047cb84b973d11fac650972
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 663589859350792619
-    second: character_run_down_0
-  - first:
-      213: 5870692041857106248
-    second: character_run_down_1
-  - first:
-      213: -804580693160569380
-    second: character_run_down_2
-  - first:
-      213: 5170212215396337516
-    second: character_run_down_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -52,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -132,91 +120,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: character_run_down_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 5145
-        width: 1500
-        height: 1455
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55b473d4aa8974b10a1d9c73de4643cc
-      internalID: 663589859350792619
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_run_down_1
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 3447
-        width: 1384
-        height: 1681
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ed1af24b11d948a8a2f99e2133705ae
-      internalID: 5870692041857106248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_run_down_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1659
-        width: 1382
-        height: 1682
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 843b9f952bc2647eb97441e2abc7ef11
-      internalID: -804580693160569380
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_run_down_3
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 0
-        width: 1382
-        height: 1728
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1304876a585134505a782483f9f96ea3
-      internalID: 5170212215396337516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

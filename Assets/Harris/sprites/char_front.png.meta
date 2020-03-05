@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: 3162b1378eeeacb49a7356322bfe6933
+guid: 067257e3260d4f349b4f47c52636b2aa
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -8711845556503833833
-    second: character_run_up_0
-  - first:
-      213: 5245997231150102770
-    second: character_run_up_1
-  - first:
-      213: 4758276056036289773
-    second: character_run_up_2
-  - first:
-      213: -9170608604862564536
-    second: character_run_up_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -52,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -132,91 +120,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: character_run_up_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 5909
-        width: 1500
-        height: 1457
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b26be9b1a53e4d3f9608891f9e9f337
-      internalID: -8711845556503833833
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_run_up_1
-      rect:
-        serializedVersion: 2
-        x: 159
-        y: 3983
-        width: 1184
-        height: 1783
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a2b0d650015e4f0c85e6a61d49c4360
-      internalID: 5245997231150102770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_run_up_2
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 2057
-        width: 1185
-        height: 1785
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf7a3a6e414a941d8bbd1c6508ee1ae3
-      internalID: 4758276056036289773
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character_run_up_3
-      rect:
-        serializedVersion: 2
-        x: 156
-        y: 134
-        width: 1185
-        height: 1783
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6813fc0d11fd243c39098dff7066c438
-      internalID: -9170608604862564536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
