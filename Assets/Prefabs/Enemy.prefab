@@ -150,6 +150,10 @@ MonoBehaviour:
   forwardDist: 1
   HP: 6
   bullet: {fileID: 2350677938468387011, guid: a1400701f073c41348c11753fc09d8f0, type: 3}
+  EnemyHurt: {fileID: 8300000, guid: 0d1ac7e4c4cdc490da3e38da02ed2b26, type: 3}
+  EnemyDied: {fileID: 8300000, guid: 61f10b03e6c0144eeb1098e9352a97c5, type: 3}
+  EnemyFiring: {fileID: 8300000, guid: e8018dba7309c4071978ba36f61996e6, type: 3}
+  EnemyCollide: {fileID: 8300000, guid: 75d9af33c86404264950f2e2e2166c0e, type: 3}
 --- !u!82 &-2327155371180963245
 AudioSource:
   m_ObjectHideFlags: 0
