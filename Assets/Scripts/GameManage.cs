@@ -7,7 +7,10 @@ using UnityEngine.UI;
 public class GameManage : MonoBehaviour
 {
     public static bool newRoom;
-
+    public static GameObject nextRoom;
+    public static GameObject lastRoom;
+    public static bool moving;
+    public static Vector2 camTarget;
     public float fadeSpeed;
 
     public GameObject key;
@@ -25,8 +28,10 @@ public class GameManage : MonoBehaviour
     public static List<GameObject> rooms;
     public static bool[] keyCollected;
     Vector2 currentRoom;
-    public static bool moving;
+    
     GameObject previousRoom;
+
+    float upDist, downDist, rightDist, leftDist;
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +50,6 @@ public class GameManage : MonoBehaviour
         rooms.AddRange(regularRooms);
         rooms.AddRange(LRooms);
         rooms.AddRange(largeRooms);
-        Debug.Log(rooms.Count);
-        Debug.Log(regularRooms.Length);
         
         keyCollected = new bool[rooms.Count];
         for(int i = 0; i < rooms.Count; i++)
@@ -54,13 +57,13 @@ public class GameManage : MonoBehaviour
             keyCollected[i] = false;
             if (rooms[i].name != "Room00")
             {
-                foreach (Transform game in rooms[i].transform)
-                {
-                    if (game.GetComponent<SpriteRenderer>())
-                    {
-                        game.GetComponent<SpriteRenderer>().color = new Color(game.GetComponent<SpriteRenderer>().color.r, game.GetComponent<SpriteRenderer>().color.g, game.GetComponent<SpriteRenderer>().color.b, 0);
-                    }
-                }
+                //foreach (Transform game in rooms[i].transform)
+                //{
+                //    if (game.GetComponent<SpriteRenderer>())
+                //    {
+                //        game.GetComponent<SpriteRenderer>().color = new Color(game.GetComponent<SpriteRenderer>().color.r, game.GetComponent<SpriteRenderer>().color.g, game.GetComponent<SpriteRenderer>().color.b, 0);
+                //    }
+                //}
                 rooms[i].SetActive(false);
             }
             else
@@ -69,11 +72,61 @@ public class GameManage : MonoBehaviour
             }
         }
         moving = false;
+
+        #region Geting default distances between the camera and the walls
+        int detectable = LayerMask.GetMask("RaycastDetectable");
+        //Vector3 detectOrigin = new Vector3(cam.transform.position.x, cam.transform.position.y, 0);
+
+        //upward raycast
+        RaycastHit2D upHit = Physics2D.Raycast(cam.transform.position, Vector2.up, Mathf.Infinity, detectable);
+        upDist = upHit.distance;
+        //downward raycast
+        RaycastHit2D downHit = Physics2D.Raycast(cam.transform.position, -Vector2.up, Mathf.Infinity, detectable);
+        downDist = downHit.distance;
+        //right raycast
+        RaycastHit2D rightHit = Physics2D.Raycast(cam.transform.position, Vector2.right, Mathf.Infinity, detectable);
+        rightDist = rightHit.distance;
+        //left raycast
+        RaycastHit2D leftHit = Physics2D.Raycast(cam.transform.position, -Vector2.right, Mathf.Infinity, detectable);
+        leftDist = leftHit.distance;
+        #endregion
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        #region Raycasting from camera
+        /*
+        if (!moving)
+        {
+            int detectable = LayerMask.GetMask("RaycastDetectable");
+
+            //Vector3 detectOrigin = new Vector3(cam.transform.position.x, cam.transform.position.y, 0);
+
+            //upward raycast
+            RaycastHit2D upHit = Physics2D.Raycast(cam.transform.position, Vector2.up, Mathf.Infinity, detectable);
+            Ray2D upRay = new Ray2D(cam.transform.position, Vector2.up);
+            Debug.DrawRay(cam.transform.position, Vector2.up * upHit.distance, Color.red);
+            //downward raycast
+            RaycastHit2D downHit = Physics2D.Raycast(cam.transform.position, -Vector2.up, Mathf.Infinity, detectable);
+            Ray2D downRay = new Ray2D(cam.transform.position, -Vector2.up);
+            Debug.DrawRay(cam.transform.position, -Vector2.up * downHit.distance, Color.red);
+            //right raycast
+            RaycastHit2D rightHit = Physics2D.Raycast(cam.transform.position, Vector2.right, Mathf.Infinity, detectable);
+            Ray2D rightRay = new Ray2D(cam.transform.position, Vector2.right);
+            Debug.DrawRay(cam.transform.position, Vector2.right * rightHit.distance, Color.red);
+            //left raycast
+            RaycastHit2D leftHit = Physics2D.Raycast(cam.transform.position, -Vector2.right, Mathf.Infinity, detectable);
+            Ray2D leftRay = new Ray2D(cam.transform.position, -Vector2.right);
+            Debug.DrawRay(cam.transform.position, -Vector2.right * leftHit.distance, Color.red);
+
+            Debug.Log("up: " + upHit.distance + ", down: " + downHit.distance + ", left: " + leftHit.distance + ", right: " + rightHit.distance);
+        }
+        */
+        #endregion
+
+
         //if reaches goal, turn on game over canvas
         if (!goal || PlayerController.LP <= 0)
         {
@@ -114,6 +167,7 @@ public class GameManage : MonoBehaviour
 
         if (newRoom)
         {
+            /*
             //check which room to fade in and move camera to
             float xdiff = player.transform.position.x - cam.transform.position.x;
             float ydiff = player.transform.position.y - cam.transform.position.y;
@@ -132,6 +186,7 @@ public class GameManage : MonoBehaviour
                 }
                 moving = true;
                 newRoom = false;
+                
             }
             else
             {
@@ -148,54 +203,37 @@ public class GameManage : MonoBehaviour
                 moving = true;
                 newRoom = false;
             }
-            
+            */
+
         }
 
         if (moving)
         {
 
-            for (int i = 0; i < rooms.Count; i++)
-            {
-                if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
-                {
-                    foreach (Transform go in rooms[i].transform)
-                    {
-                        if (go.CompareTag("Door"))
-                        {
-                            go.GetComponent<SpriteRenderer>().enabled = false;
-                            go.GetComponent<Collider2D>().isTrigger = true;
-                        }
-                    }
-                    foreach (Transform game in rooms[i].transform)
-                    {
-                        if (game.GetComponent<SpriteRenderer>())
-                        {
-                            if (game.GetComponent<SpriteRenderer>().color.a < 1)
-                            {
-                                game.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, Time.deltaTime * fadeSpeed);
-                            }
+            //for (int i = 0; i < rooms.Count; i++)
+            //{
+            //    if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
+            //    {
+            //        foreach (Transform go in rooms[i].transform)
+            //        {
+            //            if (go.CompareTag("Door"))
+            //            {
+            //                go.GetComponent<DoorController>().MoveCamTo
+            //            }
+            //        }
 
-                        }
-                    }
 
-                }
-            }
-
+            //    }
+            //}
+            nextRoom.SetActive(true);
+            //lastRoom.GetComponent<Room>().fadeOut = true;
             //move camera to the center of the new room
             //currentRoom.x and currentRoom.y are put in the opposite position because for me it's easier to read if the first number represents y index instead of x index of a room
-            Vector3 targetPos = new Vector3(currentRoom.y * xOffset, currentRoom.x * yOffset, cam.transform.position.z);
-
+            Vector3 targetPos = new Vector3(camTarget.x, camTarget.y, cam.transform.position.z);
             cam.transform.position = Vector3.MoveTowards(cam.transform.position, targetPos, 10f * Time.deltaTime);
+
             if (cam.transform.position == targetPos)
             {
-                for (int i = 0; i < rooms.Count; i++)
-                {
-                    if (rooms[i].name == "Room" + currentRoom.x + currentRoom.y)
-                    {
-                        previousRoom.SetActive(false);
-                        previousRoom = rooms[i];
-                    }
-                }
                 moving = false;
             }
         }

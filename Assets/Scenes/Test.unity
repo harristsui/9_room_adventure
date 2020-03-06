@@ -6593,7 +6593,7 @@ MonoBehaviour:
   StartCanvas: {fileID: 1214414284}
   PlayCanvas: {fileID: 962463291}
   GameOverCanvas: {fileID: 334600359}
-  doorColliderOffset: {x: 0, y: 0}
+  doorColliderOffset: {x: 0, y: 1.8}
   xOffset: 19
   yOffset: 9
 --- !u!4 &583835884

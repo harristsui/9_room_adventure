@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 4641226}
   - component: {fileID: 4641228}
   - component: {fileID: 4641227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 5378433}
   - component: {fileID: 5378435}
   - component: {fileID: 5378434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 10414296}
   - component: {fileID: 10414298}
   - component: {fileID: 10414297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 38927320}
   - component: {fileID: 38927319}
   - component: {fileID: 38927318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -486,6 +486,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1297993183}
+  MoveCamTo: {x: -38, y: 27}
 --- !u!61 &38927319
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -572,7 +574,7 @@ GameObject:
   - component: {fileID: 58488591}
   - component: {fileID: 58488593}
   - component: {fileID: 58488592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (11)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -834,7 +836,7 @@ GameObject:
   - component: {fileID: 100314948}
   - component: {fileID: 100314950}
   - component: {fileID: 100314949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -942,7 +944,7 @@ GameObject:
   - component: {fileID: 100453485}
   - component: {fileID: 100453484}
   - component: {fileID: 100453483}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -975,6 +977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 601932995}
+  MoveCamTo: {x: 0, y: 18}
 --- !u!61 &100453484
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1217,7 +1221,7 @@ GameObject:
   - component: {fileID: 119681395}
   - component: {fileID: 119681397}
   - component: {fileID: 119681396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1401,7 +1405,7 @@ GameObject:
   - component: {fileID: 125758392}
   - component: {fileID: 125758394}
   - component: {fileID: 125758393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1508,7 +1512,7 @@ GameObject:
   - component: {fileID: 125822737}
   - component: {fileID: 125822739}
   - component: {fileID: 125822738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1801,6 +1805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 138594535}
+  - component: {fileID: 138594536}
   m_Layer: 0
   m_Name: Room24
   m_TagString: Room
@@ -1832,6 +1837,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &138594536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138594534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &167098011
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,7 +2025,7 @@ GameObject:
   - component: {fileID: 172682552}
   - component: {fileID: 172682554}
   - component: {fileID: 172682553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2112,7 +2132,7 @@ GameObject:
   - component: {fileID: 174420564}
   - component: {fileID: 174420566}
   - component: {fileID: 174420565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2220,7 +2240,7 @@ GameObject:
   - component: {fileID: 181442150}
   - component: {fileID: 181442149}
   - component: {fileID: 181442148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -2279,6 +2299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1115177568}
+  MoveCamTo: {x: 0, y: 9}
 --- !u!212 &181442150
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2339,7 +2361,7 @@ GameObject:
   - component: {fileID: 196446070}
   - component: {fileID: 196446072}
   - component: {fileID: 196446071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2521,7 +2543,7 @@ GameObject:
   - component: {fileID: 214554428}
   - component: {fileID: 214554430}
   - component: {fileID: 214554429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2628,7 +2650,7 @@ GameObject:
   - component: {fileID: 221378634}
   - component: {fileID: 221378636}
   - component: {fileID: 221378635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -2736,7 +2758,7 @@ GameObject:
   - component: {fileID: 224914011}
   - component: {fileID: 224914010}
   - component: {fileID: 224914009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (3)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -2769,6 +2791,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 289957336}
+  MoveCamTo: {x: 19, y: 81}
 --- !u!61 &224914010
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3086,7 +3110,7 @@ GameObject:
   - component: {fileID: 258100088}
   - component: {fileID: 258100090}
   - component: {fileID: 258100089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3191,6 +3215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 274754523}
+  - component: {fileID: 274754524}
   m_Layer: 0
   m_Name: Room61
   m_TagString: Room
@@ -3222,6 +3247,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &274754524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274754522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &276458679
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,7 +3273,7 @@ GameObject:
   - component: {fileID: 276458680}
   - component: {fileID: 276458682}
   - component: {fileID: 276458681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3340,7 +3380,7 @@ GameObject:
   - component: {fileID: 283458096}
   - component: {fileID: 283458098}
   - component: {fileID: 283458097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (7)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3445,6 +3485,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 289957337}
+  - component: {fileID: 289957338}
   m_Layer: 0
   m_Name: Room91
   m_TagString: Room
@@ -3474,6 +3515,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &289957338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289957336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &299866969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3486,7 +3542,7 @@ GameObject:
   - component: {fileID: 299866973}
   - component: {fileID: 299866972}
   - component: {fileID: 299866971}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -3519,6 +3575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1405333562}
+  MoveCamTo: {x: 19, y: 63}
 --- !u!61 &299866972
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3605,7 +3663,7 @@ GameObject:
   - component: {fileID: 304816599}
   - component: {fileID: 304816601}
   - component: {fileID: 304816600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3710,6 +3768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 305585354}
+  - component: {fileID: 305585355}
   m_Layer: 0
   m_Name: Room4-2
   m_TagString: Room
@@ -3741,6 +3800,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &305585355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305585353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &307197590
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,7 +3826,7 @@ GameObject:
   - component: {fileID: 307197591}
   - component: {fileID: 307197593}
   - component: {fileID: 307197592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -4042,7 +4116,7 @@ GameObject:
   - component: {fileID: 321460293}
   - component: {fileID: 321460295}
   - component: {fileID: 321460294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -4149,7 +4223,7 @@ GameObject:
   - component: {fileID: 338722916}
   - component: {fileID: 338722918}
   - component: {fileID: 338722917}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -4419,7 +4493,7 @@ GameObject:
   - component: {fileID: 350612193}
   - component: {fileID: 350612192}
   - component: {fileID: 350612191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -4452,6 +4526,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 2022053337}
+  MoveCamTo: {x: 19, y: 18}
 --- !u!61 &350612192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4615,7 +4691,7 @@ GameObject:
   - component: {fileID: 356399146}
   - component: {fileID: 356399148}
   - component: {fileID: 356399147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -4797,7 +4873,7 @@ GameObject:
   - component: {fileID: 373730602}
   - component: {fileID: 373730604}
   - component: {fileID: 373730603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -4904,7 +4980,7 @@ GameObject:
   - component: {fileID: 386305912}
   - component: {fileID: 386305914}
   - component: {fileID: 386305913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -5088,7 +5164,7 @@ GameObject:
   - component: {fileID: 417028683}
   - component: {fileID: 417028685}
   - component: {fileID: 417028684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -5270,7 +5346,7 @@ GameObject:
   - component: {fileID: 425625228}
   - component: {fileID: 425625230}
   - component: {fileID: 425625229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -5377,7 +5453,7 @@ GameObject:
   - component: {fileID: 434572266}
   - component: {fileID: 434572268}
   - component: {fileID: 434572267}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (7)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -5560,7 +5636,7 @@ GameObject:
   - component: {fileID: 443784242}
   - component: {fileID: 443784241}
   - component: {fileID: 443784240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -5593,6 +5669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 0}
+  MoveCamTo: {x: 0, y: 0}
 --- !u!61 &443784241
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5754,7 +5832,7 @@ GameObject:
   - component: {fileID: 461055597}
   - component: {fileID: 461055596}
   - component: {fileID: 461055595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -5787,6 +5865,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 2069318360}
+  MoveCamTo: {x: -19, y: 45}
 --- !u!61 &461055596
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5873,7 +5953,7 @@ GameObject:
   - component: {fileID: 477480545}
   - component: {fileID: 477480547}
   - component: {fileID: 477480546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -6057,7 +6137,7 @@ GameObject:
   - component: {fileID: 482070555}
   - component: {fileID: 482070557}
   - component: {fileID: 482070556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (10)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -6164,7 +6244,7 @@ GameObject:
   - component: {fileID: 496708915}
   - component: {fileID: 496708917}
   - component: {fileID: 496708916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -6271,7 +6351,7 @@ GameObject:
   - component: {fileID: 501801280}
   - component: {fileID: 501801282}
   - component: {fileID: 501801281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -6454,7 +6534,7 @@ GameObject:
   - component: {fileID: 504333342}
   - component: {fileID: 504333341}
   - component: {fileID: 504333340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -6487,6 +6567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1927391604}
+  MoveCamTo: {x: 19, y: 45}
 --- !u!61 &504333341
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6573,7 +6655,7 @@ GameObject:
   - component: {fileID: 515998334}
   - component: {fileID: 515998336}
   - component: {fileID: 515998335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (7)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -6680,7 +6762,7 @@ GameObject:
   - component: {fileID: 521907985}
   - component: {fileID: 521907987}
   - component: {fileID: 521907986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -6787,7 +6869,7 @@ GameObject:
   - component: {fileID: 531080156}
   - component: {fileID: 531080158}
   - component: {fileID: 531080157}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -6894,7 +6976,7 @@ GameObject:
   - component: {fileID: 531329392}
   - component: {fileID: 531329394}
   - component: {fileID: 531329393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -7001,7 +7083,7 @@ GameObject:
   - component: {fileID: 538280074}
   - component: {fileID: 538280076}
   - component: {fileID: 538280075}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -7189,7 +7271,7 @@ GameObject:
   - component: {fileID: 550827006}
   - component: {fileID: 550827008}
   - component: {fileID: 550827007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -7294,6 +7376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 552581884}
+  - component: {fileID: 552581885}
   m_Layer: 0
   m_Name: Room4-1
   m_TagString: Room
@@ -7325,6 +7408,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &552581885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552581883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &555243212
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,7 +7435,7 @@ GameObject:
   - component: {fileID: 555243216}
   - component: {fileID: 555243215}
   - component: {fileID: 555243214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -7370,6 +7468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 274754522}
+  MoveCamTo: {x: 19, y: 54}
 --- !u!61 &555243215
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7494,7 +7594,7 @@ GameObject:
   - component: {fileID: 560246381}
   - component: {fileID: 560246383}
   - component: {fileID: 560246382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -7601,7 +7701,7 @@ GameObject:
   - component: {fileID: 580481203}
   - component: {fileID: 580481205}
   - component: {fileID: 580481204}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -7708,7 +7808,7 @@ GameObject:
   - component: {fileID: 588262040}
   - component: {fileID: 588262042}
   - component: {fileID: 588262041}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -7813,6 +7913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 601932996}
+  - component: {fileID: 601932997}
   m_Layer: 0
   m_Name: Room20
   m_TagString: Room
@@ -7846,6 +7947,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &601932997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601932995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &608509492
 GameObject:
   m_ObjectHideFlags: 0
@@ -7857,7 +7973,7 @@ GameObject:
   - component: {fileID: 608509493}
   - component: {fileID: 608509495}
   - component: {fileID: 608509494}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -7964,7 +8080,7 @@ GameObject:
   - component: {fileID: 612622600}
   - component: {fileID: 612622602}
   - component: {fileID: 612622601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -8292,7 +8408,7 @@ GameObject:
   - component: {fileID: 638299612}
   - component: {fileID: 638299614}
   - component: {fileID: 638299613}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -8399,7 +8515,7 @@ GameObject:
   - component: {fileID: 644521467}
   - component: {fileID: 644521469}
   - component: {fileID: 644521468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (8)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -8504,6 +8620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 644588731}
+  - component: {fileID: 644588732}
   m_Layer: 0
   m_Name: Room50
   m_TagString: Room
@@ -8535,6 +8652,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &644588732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644588730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &648142743
 GameObject:
   m_ObjectHideFlags: 0
@@ -8546,7 +8678,7 @@ GameObject:
   - component: {fileID: 648142744}
   - component: {fileID: 648142746}
   - component: {fileID: 648142745}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -8653,7 +8785,7 @@ GameObject:
   - component: {fileID: 650830029}
   - component: {fileID: 650830031}
   - component: {fileID: 650830030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -8760,7 +8892,7 @@ GameObject:
   - component: {fileID: 654879141}
   - component: {fileID: 654879143}
   - component: {fileID: 654879142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -8867,7 +8999,7 @@ GameObject:
   - component: {fileID: 657584909}
   - component: {fileID: 657584908}
   - component: {fileID: 657584907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -8950,7 +9082,7 @@ GameObject:
   - component: {fileID: 670621495}
   - component: {fileID: 670621497}
   - component: {fileID: 670621496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (9)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -9132,7 +9264,7 @@ GameObject:
   - component: {fileID: 686607908}
   - component: {fileID: 686607910}
   - component: {fileID: 686607909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -9240,7 +9372,7 @@ GameObject:
   - component: {fileID: 695736839}
   - component: {fileID: 695736838}
   - component: {fileID: 695736837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -9273,6 +9405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1082071487}
+  MoveCamTo: {x: -19, y: 27}
 --- !u!61 &695736838
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9440,7 +9574,7 @@ GameObject:
   - component: {fileID: 704641725}
   - component: {fileID: 704641727}
   - component: {fileID: 704641726}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -9548,7 +9682,7 @@ GameObject:
   - component: {fileID: 709201724}
   - component: {fileID: 709201723}
   - component: {fileID: 709201722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -9581,6 +9715,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 274754522}
+  MoveCamTo: {x: 19, y: 54}
 --- !u!61 &709201723
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9665,6 +9801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 741236959}
+  - component: {fileID: 741236960}
   m_Layer: 0
   m_Name: Room34
   m_TagString: LargeRoom
@@ -9699,6 +9836,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &741236960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741236958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 2
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &752622571
 GameObject:
   m_ObjectHideFlags: 0
@@ -9710,7 +9862,7 @@ GameObject:
   - component: {fileID: 752622572}
   - component: {fileID: 752622574}
   - component: {fileID: 752622573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -9817,7 +9969,7 @@ GameObject:
   - component: {fileID: 763523134}
   - component: {fileID: 763523136}
   - component: {fileID: 763523135}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -10064,7 +10216,7 @@ GameObject:
   - component: {fileID: 774784471}
   - component: {fileID: 774784473}
   - component: {fileID: 774784472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -10171,7 +10323,7 @@ GameObject:
   - component: {fileID: 775442788}
   - component: {fileID: 775442790}
   - component: {fileID: 775442789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -10353,7 +10505,7 @@ GameObject:
   - component: {fileID: 775953998}
   - component: {fileID: 775953997}
   - component: {fileID: 775953996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (4)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -10386,6 +10538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 644588730}
+  MoveCamTo: {x: 0, y: 45}
 --- !u!61 &775953997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10470,6 +10624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 783795245}
+  - component: {fileID: 783795246}
   m_Layer: 0
   m_Name: Room7-1
   m_TagString: Room
@@ -10501,6 +10656,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &783795246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783795244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &790519740
 GameObject:
   m_ObjectHideFlags: 0
@@ -10512,7 +10682,7 @@ GameObject:
   - component: {fileID: 790519741}
   - component: {fileID: 790519743}
   - component: {fileID: 790519742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -10701,7 +10871,7 @@ GameObject:
   - component: {fileID: 813467705}
   - component: {fileID: 813467704}
   - component: {fileID: 813467703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -10760,6 +10930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 741236958}
+  MoveCamTo: {x: 57, y: 27}
 --- !u!212 &813467705
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10820,7 +10992,7 @@ GameObject:
   - component: {fileID: 818728920}
   - component: {fileID: 818728922}
   - component: {fileID: 818728921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (11)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -11003,7 +11175,7 @@ GameObject:
   - component: {fileID: 837775315}
   - component: {fileID: 837775314}
   - component: {fileID: 837775313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -11036,6 +11208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1405333562}
+  MoveCamTo: {x: 19, y: 72}
 --- !u!61 &837775314
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11122,7 +11296,7 @@ GameObject:
   - component: {fileID: 843634833}
   - component: {fileID: 843634835}
   - component: {fileID: 843634834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -11229,7 +11403,7 @@ GameObject:
   - component: {fileID: 913551677}
   - component: {fileID: 913551679}
   - component: {fileID: 913551678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -11336,7 +11510,7 @@ GameObject:
   - component: {fileID: 931246367}
   - component: {fileID: 931246369}
   - component: {fileID: 931246368}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -11443,7 +11617,7 @@ GameObject:
   - component: {fileID: 941612028}
   - component: {fileID: 941612030}
   - component: {fileID: 941612029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -11672,7 +11846,7 @@ GameObject:
   - component: {fileID: 970209211}
   - component: {fileID: 970209213}
   - component: {fileID: 970209212}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -11780,7 +11954,7 @@ GameObject:
   - component: {fileID: 973696488}
   - component: {fileID: 973696487}
   - component: {fileID: 973696486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -11813,6 +11987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 601932995}
+  MoveCamTo: {x: 0, y: 18}
 --- !u!61 &973696487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11899,7 +12075,7 @@ GameObject:
   - component: {fileID: 975777012}
   - component: {fileID: 975777014}
   - component: {fileID: 975777013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -12006,7 +12182,7 @@ GameObject:
   - component: {fileID: 981530978}
   - component: {fileID: 981530980}
   - component: {fileID: 981530979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -12113,7 +12289,7 @@ GameObject:
   - component: {fileID: 984637075}
   - component: {fileID: 984637077}
   - component: {fileID: 984637076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -12218,6 +12394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 984840540}
+  - component: {fileID: 984840541}
   m_Layer: 0
   m_Name: Room22
   m_TagString: LRoom
@@ -12256,6 +12433,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &984840541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984840539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 2
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &993590223
 GameObject:
   m_ObjectHideFlags: 0
@@ -12267,7 +12459,7 @@ GameObject:
   - component: {fileID: 993590224}
   - component: {fileID: 993590226}
   - component: {fileID: 993590225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -12375,7 +12567,7 @@ GameObject:
   - component: {fileID: 995911909}
   - component: {fileID: 995911908}
   - component: {fileID: 995911907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -12408,6 +12600,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 783795244}
+  MoveCamTo: {x: -19, y: 63}
 --- !u!61 &995911908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12494,7 +12688,7 @@ GameObject:
   - component: {fileID: 996666576}
   - component: {fileID: 996666578}
   - component: {fileID: 996666577}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -12730,7 +12924,7 @@ GameObject:
   - component: {fileID: 1033300552}
   - component: {fileID: 1033300554}
   - component: {fileID: 1033300553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (10)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -12837,7 +13031,7 @@ GameObject:
   - component: {fileID: 1054498045}
   - component: {fileID: 1054498047}
   - component: {fileID: 1054498046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -12944,7 +13138,7 @@ GameObject:
   - component: {fileID: 1055699751}
   - component: {fileID: 1055699753}
   - component: {fileID: 1055699752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -13052,7 +13246,7 @@ GameObject:
   - component: {fileID: 1056610559}
   - component: {fileID: 1056610558}
   - component: {fileID: 1056610557}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -13085,6 +13279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 741236958}
+  MoveCamTo: {x: 76, y: 27}
 --- !u!61 &1056610558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13171,7 +13367,7 @@ GameObject:
   - component: {fileID: 1064275020}
   - component: {fileID: 1064275022}
   - component: {fileID: 1064275021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -13278,7 +13474,7 @@ GameObject:
   - component: {fileID: 1064779198}
   - component: {fileID: 1064779200}
   - component: {fileID: 1064779199}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -13385,7 +13581,7 @@ GameObject:
   - component: {fileID: 1081866896}
   - component: {fileID: 1081866898}
   - component: {fileID: 1081866897}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -13490,6 +13686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1082071488}
+  - component: {fileID: 1082071489}
   m_Layer: 0
   m_Name: Room2-1
   m_TagString: Room
@@ -13521,6 +13718,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1082071489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082071487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 1
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &1083360332
 GameObject:
   m_ObjectHideFlags: 0
@@ -13532,7 +13744,7 @@ GameObject:
   - component: {fileID: 1083360333}
   - component: {fileID: 1083360335}
   - component: {fileID: 1083360334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -13640,7 +13852,7 @@ GameObject:
   - component: {fileID: 1094070582}
   - component: {fileID: 1094070581}
   - component: {fileID: 1094070580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -13654,13 +13866,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094070578}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -18.989998, y: -4.5, z: 0}
   m_LocalScale: {x: 0.58744, y: 0.58744, z: 0.58744}
   m_Children: []
   m_Father: {fileID: 741236959}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &1094070580
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13699,6 +13911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 984840539}
+  MoveCamTo: {x: 57, y: 18}
 --- !u!212 &1094070582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13759,7 +13973,7 @@ GameObject:
   - component: {fileID: 1094858561}
   - component: {fileID: 1094858563}
   - component: {fileID: 1094858562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (8)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -13866,7 +14080,7 @@ GameObject:
   - component: {fileID: 1107813680}
   - component: {fileID: 1107813682}
   - component: {fileID: 1107813681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -13971,6 +14185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1115177569}
+  - component: {fileID: 1115177570}
   m_Layer: 0
   m_Name: Room10
   m_TagString: Room
@@ -14002,6 +14217,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1115177570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115177568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &1136194896
 GameObject:
   m_ObjectHideFlags: 0
@@ -14013,7 +14243,7 @@ GameObject:
   - component: {fileID: 1136194897}
   - component: {fileID: 1136194899}
   - component: {fileID: 1136194898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -14120,7 +14350,7 @@ GameObject:
   - component: {fileID: 1165247829}
   - component: {fileID: 1165247831}
   - component: {fileID: 1165247830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -14308,7 +14538,7 @@ GameObject:
   - component: {fileID: 1200350746}
   - component: {fileID: 1200350748}
   - component: {fileID: 1200350747}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (7)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -14415,7 +14645,7 @@ GameObject:
   - component: {fileID: 1200383468}
   - component: {fileID: 1200383470}
   - component: {fileID: 1200383469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -14761,7 +14991,7 @@ GameObject:
   - component: {fileID: 1222673185}
   - component: {fileID: 1222673187}
   - component: {fileID: 1222673186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -14869,7 +15099,7 @@ GameObject:
   - component: {fileID: 1251298524}
   - component: {fileID: 1251298523}
   - component: {fileID: 1251298522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -14902,6 +15132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1297993183}
+  MoveCamTo: {x: -38, y: 27}
 --- !u!61 &1251298523
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14988,7 +15220,7 @@ GameObject:
   - component: {fileID: 1260294810}
   - component: {fileID: 1260294812}
   - component: {fileID: 1260294811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (7)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -15161,7 +15393,7 @@ GameObject:
   - component: {fileID: 1284169173}
   - component: {fileID: 1284169175}
   - component: {fileID: 1284169174}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -15269,7 +15501,7 @@ GameObject:
   - component: {fileID: 1289726291}
   - component: {fileID: 1289726290}
   - component: {fileID: 1289726289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -15302,6 +15534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 644588730}
+  MoveCamTo: {x: 0, y: 45}
 --- !u!61 &1289726290
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15389,7 +15623,7 @@ GameObject:
   - component: {fileID: 1291804321}
   - component: {fileID: 1291804320}
   - component: {fileID: 1291804319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -15422,6 +15656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 984840539}
+  MoveCamTo: {x: 57, y: 18}
 --- !u!61 &1291804320
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15587,6 +15823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1297993184}
+  - component: {fileID: 1297993185}
   m_Layer: 0
   m_Name: Room3-2
   m_TagString: Room
@@ -15618,6 +15855,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1297993185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297993183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &1308547839
 GameObject:
   m_ObjectHideFlags: 0
@@ -15629,7 +15881,7 @@ GameObject:
   - component: {fileID: 1308547840}
   - component: {fileID: 1308547842}
   - component: {fileID: 1308547841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -15736,7 +15988,7 @@ GameObject:
   - component: {fileID: 1308876497}
   - component: {fileID: 1308876499}
   - component: {fileID: 1308876498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -15844,7 +16096,7 @@ GameObject:
   - component: {fileID: 1316925235}
   - component: {fileID: 1316925234}
   - component: {fileID: 1316925233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -15877,6 +16129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 2069318360}
+  MoveCamTo: {x: -19, y: 45}
 --- !u!61 &1316925234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15964,7 +16218,7 @@ GameObject:
   - component: {fileID: 1317914398}
   - component: {fileID: 1317914397}
   - component: {fileID: 1317914396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -15997,6 +16251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 2069318360}
+  MoveCamTo: {x: -38, y: 45}
 --- !u!61 &1317914397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16083,7 +16339,7 @@ GameObject:
   - component: {fileID: 1331798555}
   - component: {fileID: 1331798557}
   - component: {fileID: 1331798556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (7)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -16190,7 +16446,7 @@ GameObject:
   - component: {fileID: 1351986259}
   - component: {fileID: 1351986261}
   - component: {fileID: 1351986260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -16297,7 +16553,7 @@ GameObject:
   - component: {fileID: 1365281737}
   - component: {fileID: 1365281739}
   - component: {fileID: 1365281738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -16404,7 +16660,7 @@ GameObject:
   - component: {fileID: 1366798332}
   - component: {fileID: 1366798334}
   - component: {fileID: 1366798333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -16640,7 +16896,7 @@ GameObject:
   - component: {fileID: 1377341382}
   - component: {fileID: 1377341384}
   - component: {fileID: 1377341383}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -16820,6 +17076,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1405333563}
+  - component: {fileID: 1405333564}
   m_Layer: 0
   m_Name: Room71
   m_TagString: LargeRoom
@@ -16854,6 +17111,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1405333564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405333562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 2
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &1425498813
 GameObject:
   m_ObjectHideFlags: 0
@@ -16865,7 +17137,7 @@ GameObject:
   - component: {fileID: 1425498814}
   - component: {fileID: 1425498816}
   - component: {fileID: 1425498815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -17129,7 +17401,7 @@ GameObject:
   - component: {fileID: 1456094278}
   - component: {fileID: 1456094277}
   - component: {fileID: 1456094276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -17162,6 +17434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 138594534}
+  MoveCamTo: {x: 76, y: 18}
 --- !u!61 &1456094277
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17248,7 +17522,7 @@ GameObject:
   - component: {fileID: 1456335244}
   - component: {fileID: 1456335246}
   - component: {fileID: 1456335245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -17355,7 +17629,7 @@ GameObject:
   - component: {fileID: 1460673794}
   - component: {fileID: 1460673796}
   - component: {fileID: 1460673795}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -17462,7 +17736,7 @@ GameObject:
   - component: {fileID: 1474279396}
   - component: {fileID: 1474279398}
   - component: {fileID: 1474279397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (10)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -17570,7 +17844,7 @@ GameObject:
   - component: {fileID: 1489012801}
   - component: {fileID: 1489012800}
   - component: {fileID: 1489012799}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -17603,6 +17877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1082071487}
+  MoveCamTo: {x: -19, y: 27}
 --- !u!61 &1489012800
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17771,7 +18047,7 @@ GameObject:
   - component: {fileID: 1497634090}
   - component: {fileID: 1497634089}
   - component: {fileID: 1497634088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -17804,6 +18080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1082071487}
+  MoveCamTo: {x: -19, y: 18}
 --- !u!61 &1497634089
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17891,7 +18169,7 @@ GameObject:
   - component: {fileID: 1500152720}
   - component: {fileID: 1500152719}
   - component: {fileID: 1500152718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (3)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -17950,6 +18228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1927391604}
+  MoveCamTo: {x: 38, y: 36}
 --- !u!212 &1500152720
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18048,7 +18328,7 @@ GameObject:
   - component: {fileID: 1523339079}
   - component: {fileID: 1523339081}
   - component: {fileID: 1523339080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -18389,7 +18669,7 @@ GameObject:
   - component: {fileID: 1557220893}
   - component: {fileID: 1557220892}
   - component: {fileID: 1557220891}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -18422,6 +18702,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1937763211}
+  MoveCamTo: {x: 0, y: 0}
 --- !u!61 &1557220892
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18585,7 +18867,7 @@ GameObject:
   - component: {fileID: 1592002016}
   - component: {fileID: 1592002018}
   - component: {fileID: 1592002017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -18765,7 +19047,7 @@ GameObject:
   - component: {fileID: 1611761646}
   - component: {fileID: 1611761648}
   - component: {fileID: 1611761647}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -18873,7 +19155,7 @@ GameObject:
   - component: {fileID: 1617230666}
   - component: {fileID: 1617230665}
   - component: {fileID: 1617230664}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -18906,6 +19188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1927391604}
+  MoveCamTo: {x: 19, y: 45}
 --- !u!61 &1617230665
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18993,7 +19277,7 @@ GameObject:
   - component: {fileID: 1629555646}
   - component: {fileID: 1629555645}
   - component: {fileID: 1629555644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -19026,6 +19310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 138594534}
+  MoveCamTo: {x: 76, y: 18}
 --- !u!61 &1629555645
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19113,7 +19399,7 @@ GameObject:
   - component: {fileID: 1631259722}
   - component: {fileID: 1631259721}
   - component: {fileID: 1631259720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -19146,6 +19432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1115177568}
+  MoveCamTo: {x: 0, y: 9}
 --- !u!61 &1631259721
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19313,7 +19601,7 @@ GameObject:
   - component: {fileID: 1641216166}
   - component: {fileID: 1641216168}
   - component: {fileID: 1641216167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (10)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -19420,7 +19708,7 @@ GameObject:
   - component: {fileID: 1655669132}
   - component: {fileID: 1655669134}
   - component: {fileID: 1655669133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -19527,7 +19815,7 @@ GameObject:
   - component: {fileID: 1659941140}
   - component: {fileID: 1659941142}
   - component: {fileID: 1659941141}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (6)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -19918,11 +20206,11 @@ MonoBehaviour:
   key: {fileID: 6629559141071267200, guid: ce313a1e223544f4f81da6202523c80a, type: 3}
   cam: {fileID: 657584906}
   player: {fileID: 1862213079}
-  goal: {fileID: 0}
+  goal: {fileID: 131487005}
   StartCanvas: {fileID: 1506601955}
   PlayCanvas: {fileID: 946359754}
   GameOverCanvas: {fileID: 559860387}
-  doorColliderOffset: {x: 0, y: 0}
+  doorColliderOffset: {x: 0, y: 1.8}
   xOffset: 19
   yOffset: 9
 --- !u!4 &1662802599
@@ -19950,7 +20238,7 @@ GameObject:
   - component: {fileID: 1666407157}
   - component: {fileID: 1666407159}
   - component: {fileID: 1666407158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -20057,7 +20345,7 @@ GameObject:
   - component: {fileID: 1677615535}
   - component: {fileID: 1677615537}
   - component: {fileID: 1677615536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (9)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -20164,7 +20452,7 @@ GameObject:
   - component: {fileID: 1684262834}
   - component: {fileID: 1684262836}
   - component: {fileID: 1684262835}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -20346,7 +20634,7 @@ GameObject:
   - component: {fileID: 1701985486}
   - component: {fileID: 1701985488}
   - component: {fileID: 1701985487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -20526,7 +20814,7 @@ GameObject:
   - component: {fileID: 1706677047}
   - component: {fileID: 1706677049}
   - component: {fileID: 1706677048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (8)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -20633,7 +20921,7 @@ GameObject:
   - component: {fileID: 1712413751}
   - component: {fileID: 1712413753}
   - component: {fileID: 1712413752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -20741,7 +21029,7 @@ GameObject:
   - component: {fileID: 1729536047}
   - component: {fileID: 1729536046}
   - component: {fileID: 1729536045}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -20774,6 +21062,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 2022053337}
+  MoveCamTo: {x: 19, y: 18}
 --- !u!61 &1729536046
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20941,7 +21231,7 @@ GameObject:
   - component: {fileID: 1754220853}
   - component: {fileID: 1754220855}
   - component: {fileID: 1754220854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (9)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -21049,7 +21339,7 @@ GameObject:
   - component: {fileID: 1758567692}
   - component: {fileID: 1758567691}
   - component: {fileID: 1758567690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -21082,6 +21372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 552581883}
+  MoveCamTo: {x: -19, y: 36}
 --- !u!61 &1758567691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21168,7 +21460,7 @@ GameObject:
   - component: {fileID: 1759303439}
   - component: {fileID: 1759303441}
   - component: {fileID: 1759303440}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -21372,7 +21664,7 @@ GameObject:
   - component: {fileID: 1797826962}
   - component: {fileID: 1797826964}
   - component: {fileID: 1797826963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -21479,7 +21771,7 @@ GameObject:
   - component: {fileID: 1802336019}
   - component: {fileID: 1802336021}
   - component: {fileID: 1802336020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -21586,7 +21878,7 @@ GameObject:
   - component: {fileID: 1803104419}
   - component: {fileID: 1803104421}
   - component: {fileID: 1803104420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -21693,7 +21985,7 @@ GameObject:
   - component: {fileID: 1834109047}
   - component: {fileID: 1834109049}
   - component: {fileID: 1834109048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -21800,7 +22092,7 @@ GameObject:
   - component: {fileID: 1837123200}
   - component: {fileID: 1837123202}
   - component: {fileID: 1837123201}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -21908,7 +22200,7 @@ GameObject:
   - component: {fileID: 1847933442}
   - component: {fileID: 1847933441}
   - component: {fileID: 1847933440}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (3)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -21941,6 +22233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 783795244}
+  MoveCamTo: {x: -19, y: 63}
 --- !u!61 &1847933441
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22457,7 +22751,7 @@ GameObject:
   - component: {fileID: 1863335260}
   - component: {fileID: 1863335259}
   - component: {fileID: 1863335258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -22490,6 +22784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 601932995}
+  MoveCamTo: {x: 0, y: 18}
 --- !u!61 &1863335259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22577,7 +22873,7 @@ GameObject:
   - component: {fileID: 1875893798}
   - component: {fileID: 1875893797}
   - component: {fileID: 1875893796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -22610,6 +22906,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 0}
+  MoveCamTo: {x: 0, y: 0}
 --- !u!61 &1875893797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22772,7 +23070,7 @@ GameObject:
   - component: {fileID: 1887184221}
   - component: {fileID: 1887184220}
   - component: {fileID: 1887184219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -22805,6 +23103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1405333562}
+  MoveCamTo: {x: 0, y: 63}
 --- !u!61 &1887184220
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22891,7 +23191,7 @@ GameObject:
   - component: {fileID: 1897742522}
   - component: {fileID: 1897742524}
   - component: {fileID: 1897742523}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -22998,7 +23298,7 @@ GameObject:
   - component: {fileID: 1898638687}
   - component: {fileID: 1898638689}
   - component: {fileID: 1898638688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -23105,7 +23405,7 @@ GameObject:
   - component: {fileID: 1905339213}
   - component: {fileID: 1905339215}
   - component: {fileID: 1905339214}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -23212,7 +23512,7 @@ GameObject:
   - component: {fileID: 1915209507}
   - component: {fileID: 1915209509}
   - component: {fileID: 1915209508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (7)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -23319,7 +23619,7 @@ GameObject:
   - component: {fileID: 1924883461}
   - component: {fileID: 1924883463}
   - component: {fileID: 1924883462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -23424,6 +23724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1927391605}
+  - component: {fileID: 1927391606}
   m_Layer: 0
   m_Name: Room41
   m_TagString: LRoom
@@ -23462,6 +23763,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1927391606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927391604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 2
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &1928972391
 GameObject:
   m_ObjectHideFlags: 0
@@ -23473,7 +23789,7 @@ GameObject:
   - component: {fileID: 1928972392}
   - component: {fileID: 1928972394}
   - component: {fileID: 1928972393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall '
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -23578,6 +23894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1937763212}
+  - component: {fileID: 1937763213}
   m_Layer: 0
   m_Name: Room00
   m_TagString: Room
@@ -23607,6 +23924,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1937763213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937763211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &1948872209
 GameObject:
   m_ObjectHideFlags: 0
@@ -23618,7 +23950,7 @@ GameObject:
   - component: {fileID: 1948872210}
   - component: {fileID: 1948872212}
   - component: {fileID: 1948872211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (12)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -23726,7 +24058,7 @@ GameObject:
   - component: {fileID: 1951892802}
   - component: {fileID: 1951892801}
   - component: {fileID: 1951892800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (2)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -23759,6 +24091,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 984840539}
+  MoveCamTo: {x: 38, y: 18}
 --- !u!61 &1951892801
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24002,7 +24336,7 @@ GameObject:
   - component: {fileID: 1976938888}
   - component: {fileID: 1976938887}
   - component: {fileID: 1976938886}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -24035,6 +24369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 1927391604}
+  MoveCamTo: {x: 38, y: 36}
 --- !u!61 &1976938887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24197,7 +24533,7 @@ GameObject:
   - component: {fileID: 1994096793}
   - component: {fileID: 1994096792}
   - component: {fileID: 1994096791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (3)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -24211,13 +24547,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994096789}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 19.057007, y: -4.5, z: 0}
   m_LocalScale: {x: 0.58744, y: 0.58744, z: 0.58744}
   m_Children: []
   m_Father: {fileID: 1927391605}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!61 &1994096791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24256,6 +24592,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 984840539}
+  MoveCamTo: {x: 38, y: 27}
 --- !u!212 &1994096793
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24357,7 +24695,7 @@ GameObject:
   - component: {fileID: 2015692130}
   - component: {fileID: 2015692129}
   - component: {fileID: 2015692128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (4)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -24390,6 +24728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 305585353}
+  MoveCamTo: {x: -38, y: 36}
 --- !u!61 &2015692129
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24477,7 +24817,7 @@ GameObject:
   - component: {fileID: 2017159939}
   - component: {fileID: 2017159938}
   - component: {fileID: 2017159937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -24510,6 +24850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 2069318360}
+  MoveCamTo: {x: -19, y: 54}
 --- !u!61 &2017159938
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24594,6 +24936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2022053338}
+  - component: {fileID: 2022053339}
   m_Layer: 0
   m_Name: Room21
   m_TagString: Room
@@ -24625,6 +24968,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022053339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022053337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 0
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &2042968614
 GameObject:
   m_ObjectHideFlags: 0
@@ -24636,7 +24994,7 @@ GameObject:
   - component: {fileID: 2042968615}
   - component: {fileID: 2042968617}
   - component: {fileID: 2042968616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -24744,7 +25102,7 @@ GameObject:
   - component: {fileID: 2055066669}
   - component: {fileID: 2055066668}
   - component: {fileID: 2055066667}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -24777,6 +25135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 305585353}
+  MoveCamTo: {x: -38, y: 36}
 --- !u!61 &2055066668
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24929,7 +25289,7 @@ GameObject:
   - component: {fileID: 2069079299}
   - component: {fileID: 2069079301}
   - component: {fileID: 2069079300}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -25034,6 +25394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2069318361}
+  - component: {fileID: 2069318362}
   m_Layer: 0
   m_Name: Room5-1
   m_TagString: LargeRoom
@@ -25070,6 +25431,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2069318362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069318360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisRoomType: 2
+  fadeIn: 0
+  fadeOut: 0
 --- !u!1 &2081712898
 GameObject:
   m_ObjectHideFlags: 0
@@ -25082,7 +25458,7 @@ GameObject:
   - component: {fileID: 2081712902}
   - component: {fileID: 2081712901}
   - component: {fileID: 2081712900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -25115,6 +25491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d0a0c215ed446ca91c4d5b2bb226cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectedRoom: {fileID: 741236958}
+  MoveCamTo: {x: 57, y: 36}
 --- !u!61 &2081712901
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25201,7 +25579,7 @@ GameObject:
   - component: {fileID: 2083430969}
   - component: {fileID: 2083430971}
   - component: {fileID: 2083430970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -25383,7 +25761,7 @@ GameObject:
   - component: {fileID: 2102349256}
   - component: {fileID: 2102349258}
   - component: {fileID: 2102349257}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (8)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -25490,7 +25868,7 @@ GameObject:
   - component: {fileID: 2108846054}
   - component: {fileID: 2108846056}
   - component: {fileID: 2108846055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -25749,7 +26127,7 @@ GameObject:
   - component: {fileID: 2127099795}
   - component: {fileID: 2127099797}
   - component: {fileID: 2127099796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -25856,7 +26234,7 @@ GameObject:
   - component: {fileID: 2141913272}
   - component: {fileID: 2141913274}
   - component: {fileID: 2141913273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (7)
   m_TagString: Wall
   m_Icon: {fileID: 0}

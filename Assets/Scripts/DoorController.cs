@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+    public GameObject ConnectedRoom;
+    public Vector2 MoveCamTo;
+
     SpriteRenderer sr;
     Collider2D c;
 
@@ -19,20 +22,18 @@ public class DoorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (keyUI.activeSelf)
-        //{
-        //    sr.enabled = false;
-        //    c.isTrigger = true;
-        //}
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !GameManage.moving)
         {
-            Debug.Log("player entered");
-            //GameManage.generate = true;
-            GameManage.newRoom = true;
+            GameManage.moving = true;
+            GameManage.nextRoom = ConnectedRoom;
+            //GameManage.lastRoom = transform.parent.gameObject;
+            GameManage.camTarget = MoveCamTo;
+            transform.GetComponentInParent<Room>().fadeOut = true;
         }
     }
 }
