@@ -34,16 +34,19 @@ public class EnemyRoomManager : MonoBehaviour
     void Update()
     {
         #region Let Random Enemy Drop Key
-
-        if (enemies[keyEnemy])
+        if (enemies.Count > 0)
         {
-            lastPos = enemies[keyEnemy].transform.position;
+            if (enemies[keyEnemy])
+            {
+                lastPos = enemies[keyEnemy].transform.position;
+            }
+            if (!enemies[keyEnemy] && !keyGenerated)
+            {
+                Instantiate(key, lastPos, Quaternion.identity, transform);
+                keyGenerated = true;
+            }
         }
-        if (!enemies[keyEnemy] && !keyGenerated)
-        {
-            Instantiate(key, lastPos, Quaternion.identity, transform);
-            keyGenerated = true;
-        }
+       
 
         #endregion
     }

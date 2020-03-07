@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public int nBullets;
+    //1~3
     public float calmTime, chaseTime;
     public float speed;
     public float forwardDist;
@@ -53,12 +54,12 @@ public class EnemyController : MonoBehaviour
             timer += Time.deltaTime;
             targetY = Player.transform.position.y;
 
-            if ((timer - startTime) >= chaseTime && chase == 0)
+            if ((timer - startTime) >= Random.Range(1,3) && chase == 0)
             {
                 startTime = timer;
                 chase = 1;
             }
-            if ((timer - startTime) >= calmTime && chase == 1)
+            if ((timer - startTime) >= Random.Range(1,3) && chase == 1)
             {
                 startTime = timer;
                 chase = 0;

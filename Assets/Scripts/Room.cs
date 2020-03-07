@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    public enum roomType { Small, Long, Big};
+    public enum roomType { Small, Long, Lshaped, Big};
     public roomType thisRoomType;
     Bounds cameraMoveBound;
 
@@ -104,14 +104,40 @@ public class Room : MonoBehaviour
                 cam.transform.position = Vector3.MoveTowards(cam.transform.position, targetPos, 10f * Time.deltaTime);
             }
 
+            if (thisRoomType == roomType.Lshaped)
+            {
+                cameraMoveBound = new Bounds(new Vector3(9.5f + transform.position.x, 4.5f + transform.position.y, 0), new Vector3(19f, 9f, 0));
+                if (player.position.x <= cameraMoveBound.min.x)
+                {
+                    targetPos.x = cameraMoveBound.min.x;
+                }
+                else if (player.position.x >= cameraMoveBound.max.x)
+                {
+                    targetPos.x = cameraMoveBound.max.x;
+                }
+                else
+                {
+                    targetPos.x = player.position.x;
+                }
+                if (player.position.y <= cameraMoveBound.min.y)
+                {
+                    targetPos.y = cameraMoveBound.min.y;
+                }
+                else if (player.position.y >= cameraMoveBound.max.y)
+                {
+                    targetPos.y = cameraMoveBound.max.y;
+                }
+                else
+                {
+                    targetPos.y = player.position.y;
+                }
+                targetPos.z = cam.transform.position.z;
+                cam.transform.position = Vector3.MoveTowards(cam.transform.position, targetPos, 10f * Time.deltaTime);
+            }
+
             if (thisRoomType == roomType.Big)
             {
                 cameraMoveBound = new Bounds(new Vector3(-9.5f + transform.position.x, 4.5f + transform.position.y, 0), new Vector3(19f, 9f, 0));
-                //if (cameraMoveBound.Contains(player.position))
-                //{
-                //    targetPos.x = player.position.x;
-                //    targetPos.y = player.position.y;
-                //}
                 if (player.position.x <= cameraMoveBound.min.x)
                 {
                     targetPos.x = cameraMoveBound.min.x;
