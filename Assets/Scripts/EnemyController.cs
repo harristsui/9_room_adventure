@@ -29,6 +29,10 @@ public class EnemyController : MonoBehaviour
     float targetY;
     bool fired;
 
+    public GameObject HPPickUp;
+    float HPUpDropRate = .1f;
+    float chance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +44,7 @@ public class EnemyController : MonoBehaviour
         oldPos = transform.position;
         fired = false;
         shootSource = GetComponent<AudioSource>();
+        chance = Random.Range(0f, 1f);
     }
 
     // Update is called once per frame
@@ -49,6 +54,10 @@ public class EnemyController : MonoBehaviour
         {
             if (HP <= 0)
             {
+                if (chance <= HPUpDropRate)
+                {
+                    Instantiate(HPPickUp, transform.position, Quaternion.identity, transform.parent);
+                }
                 Destroy(gameObject);
             }
             timer += Time.deltaTime;

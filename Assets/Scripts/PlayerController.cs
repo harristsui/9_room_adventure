@@ -101,7 +101,42 @@ public class PlayerController : MonoBehaviour
                 transform.up = rightJS.Direction.normalized;
                 playerSource.PlayOneShot(Run);
             }
-           
+            //animation
+            if (y > 0)
+            {
+                anim.SetBool("isUp", true);
+            }
+            else
+            {
+                anim.SetBool("isUp", false);
+            }
+
+            if (y < 0)
+            {
+                anim.SetBool("isDown", true);
+            }
+            else
+            {
+                anim.SetBool("isDown", false);
+            }
+
+            if (Mathf.Abs(x) > 0)
+            {
+                anim.SetBool("isHorizontal", true);
+            }
+            else
+            {
+                anim.SetBool("isHorizontal", false);
+            }
+
+            if (x >= 0)
+            {
+                characterSprite.flipX = false;
+            }
+            else
+            {
+                characterSprite.flipX = true;
+            }
             #else
             //Disable joysticks
             leftJS.gameObject.SetActive(false);
@@ -159,6 +194,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //If lp<3 and on trigger enter health pick up
+        if (LP < 3 && collision.CompareTag("HealthPickUp"))
+        {
+            LP++;
+            HP[LP].SetActive(true);
+            Destroy(collision.gameObject);
+        }
+
         //If hit by enemy bullet, destroy bullet and reduce health
         if (collision.CompareTag("EnemyBullet"))
         {
