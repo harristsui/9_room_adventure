@@ -33545,6 +33545,26 @@ PrefabInstance:
       propertyPath: winCanvas
       value: 
       objectReference: {fileID: 2124339434}
+    - target: {fileID: 7085297449417676191, guid: 78a360cce354147bf9905425f4bb94c1,
+        type: 3}
+      propertyPath: HP
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085297449417676191, guid: 78a360cce354147bf9905425f4bb94c1,
+        type: 3}
+      propertyPath: forwardDist
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085297449417676191, guid: 78a360cce354147bf9905425f4bb94c1,
+        type: 3}
+      propertyPath: speed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085297449417676191, guid: 78a360cce354147bf9905425f4bb94c1,
+        type: 3}
+      propertyPath: nBullets
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7085297449417676192, guid: 78a360cce354147bf9905425f4bb94c1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33604,6 +33624,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085297449417676193, guid: 78a360cce354147bf9905425f4bb94c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78a360cce354147bf9905425f4bb94c1, type: 3}
