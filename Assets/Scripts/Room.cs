@@ -9,12 +9,14 @@ public class Room : MonoBehaviour
     Bounds cameraMoveBound;
 
     public bool fadeIn, fadeOut;
-    float fadeSpeed = 3f;
+    float fadeSpeed = 2f;
     Transform player;
     GameObject cam;
     Vector3 targetPos;
 
     SpriteRenderer[] sr;
+
+    AudioSource aud;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,8 @@ public class Room : MonoBehaviour
             }
         }
         sr = GetComponentsInChildren<SpriteRenderer>();
+        aud = GetComponent<AudioSource>();
+        aud.volume = 0;
     }
 
     private void OnEnable()
@@ -60,6 +64,15 @@ public class Room : MonoBehaviour
                     }
                 }
             }
+            //fade in background music here
+            if (aud.volume < 1)
+            {
+                aud.volume += Time.deltaTime * fadeSpeed;
+            }
+            else
+            {
+                aud.volume = 1;
+            }
         }
         if (fadeOut)
         {
@@ -77,6 +90,15 @@ public class Room : MonoBehaviour
                         gameObject.SetActive(false);
                     }
                 }
+            }
+            //fade out the background music here
+            if (aud.volume > 0)
+            {
+                aud.volume -= Time.deltaTime * fadeSpeed;
+            }
+            else
+            {
+                aud.volume = 0;
             }
         }
         #endregion

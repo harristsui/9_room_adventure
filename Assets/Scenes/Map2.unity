@@ -614,7 +614,7 @@ PrefabInstance:
     - target: {fileID: 214928340640767097, guid: ce313a1e223544f4f81da6202523c80a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 214928340640767097, guid: ce313a1e223544f4f81da6202523c80a,
         type: 3}
@@ -2520,7 +2520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisRoomType: 2
+  thisRoomType: 3
   fadeIn: 0
   fadeOut: 0
 --- !u!4 &185483174
@@ -12072,7 +12072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisRoomType: 2
+  thisRoomType: 3
   fadeIn: 0
   fadeOut: 0
 --- !u!114 &741236961
@@ -21773,7 +21773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisRoomType: 2
+  thisRoomType: 3
   fadeIn: 0
   fadeOut: 0
 --- !u!114 &1405333565
@@ -32643,7 +32643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052d57adcedb14945b04ebf470eb9fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisRoomType: 2
+  thisRoomType: 3
   fadeIn: 0
   fadeOut: 0
 --- !u!114 &2069318363
