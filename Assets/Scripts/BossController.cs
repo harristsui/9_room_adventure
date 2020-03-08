@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossController : MonoBehaviour
 {
     public GameObject bossBullet;
-    public GameObject winCanvas;
+    public GameObject Key;
     public int nBullets;
     public float speed;
     public float forwardDist;
@@ -36,7 +36,7 @@ public class BossController : MonoBehaviour
         {
             if (HP <= 0)
             {
-                winCanvas.SetActive(true);
+                Instantiate(Key, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
             timer += Time.deltaTime;
