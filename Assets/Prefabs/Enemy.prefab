@@ -154,6 +154,8 @@ MonoBehaviour:
   EnemyDied: {fileID: 8300000, guid: 61f10b03e6c0144eeb1098e9352a97c5, type: 3}
   EnemyFiring: {fileID: 8300000, guid: e8018dba7309c4071978ba36f61996e6, type: 3}
   EnemyCollide: {fileID: 8300000, guid: 75d9af33c86404264950f2e2e2166c0e, type: 3}
+  HPPickUp: {fileID: 3773205999245778969, guid: 38c3f852071814fb7a7fe3c4fa8903f1,
+    type: 3}
 --- !u!82 &-2327155371180963245
 AudioSource:
   m_ObjectHideFlags: 0
