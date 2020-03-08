@@ -33565,6 +33565,12 @@ PrefabInstance:
       propertyPath: nBullets
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7085297449417676191, guid: 78a360cce354147bf9905425f4bb94c1,
+        type: 3}
+      propertyPath: bossBullet
+      value: 
+      objectReference: {fileID: 4414913432692170152, guid: 300dc74cf433c4c779ab9827c8121a6c,
+        type: 3}
     - target: {fileID: 7085297449417676192, guid: 78a360cce354147bf9905425f4bb94c1,
         type: 3}
       propertyPath: m_LocalPosition.x
