@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public GameObject[] HP;
     public GameObject Bullet;
     public Transform firePoint;
+    public GameObject gunHolder;
     public float fireRate;
 
     public AudioClip KeyGet; //done
@@ -71,15 +72,15 @@ public class PlayerController : MonoBehaviour
 		//shoot in phone
         if (rightJS.Horizontal != 0 || rightJS.Vertical != 0)
 		{
-			Instantiate(Bullet, firePoint.position, transform.rotation);
+			Instantiate(Bullet, firePoint.position, gunHolder.transform.rotation);
             playerSource.PlayOneShot(playerLaser);
-            playerLaser.pitch = Random.Range(0.1f, 0.9f);
+            playerSource.pitch = Random.Range(.85f, 1.15f);
 		}
         #else
         //shoot in laptop
         if (Input.GetButton("Jump"))
         {
-            Instantiate(Bullet, firePoint.position, transform.rotation);
+            Instantiate(Bullet, firePoint.position, gunHolder.transform.rotation);
             playerSource.PlayOneShot(playerLaser);
             playerSource.pitch = Random.Range(.85f, 1.15f);
         }
@@ -97,14 +98,23 @@ public class PlayerController : MonoBehaviour
             float y = leftJS.Vertical;
             if (x != 0 || y != 0)
             {
-                rb.velocity = new Vector2(Mathf.Sign(x)*Mathf.Clamp(Mathf.Abs(x * speed),1f,speed), Mathf.Sign(y)*Mathf.Clamp(Mathf.Abs(y * speed),1f,speed));
+                //rb.velocity = new Vector2(Mathf.Sign(x)*Mathf.Clamp(Mathf.Abs(x * speed),6f,speed), Mathf.Sign(y)*Mathf.Clamp(Mathf.Abs(y * speed),6f,speed));
+                rb.velocity = new Vector2(x * speed, y * speed);
+                if (rb.velocity.magnitude < 6f && rb.velocity.magnitude >= 0)
+                {
+                    rb.velocity = rb.velocity.normalized * 6f;
+                }
+                if (rb.velocity.magnitude > speed)
+                {
+                    rb.velocity = rb.velocity.normalized * speed;
+                }
             }
             
 
             //Player Rotation on phone
             if (rightJS.Horizontal != 0 && rightJS.Vertical != 0)
             {
-                transform.up = rightJS.Direction.normalized;
+                gunHolder.transform.right = rightJS.Direction.normalized;
                 playerSource.PlayOneShot(Run);
             }
             //animation
@@ -155,8 +165,16 @@ public class PlayerController : MonoBehaviour
 
             //Player Rotation in Laptop
             Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.up = (mouseScreenPosition - (Vector2)transform.position).normalized;
-
+            gunHolder.transform.right = (mouseScreenPosition - (Vector2)transform.position).normalized;
+            
+            if (rb.velocity.magnitude < 6f && rb.velocity.magnitude >= 0)
+            {
+                rb.velocity = rb.velocity.normalized * 6f;
+            }
+            if (rb.velocity.magnitude > speed)
+            {
+                rb.velocity = rb.velocity.normalized * speed;
+            }
             //animation
             if (y > 0)
             {
