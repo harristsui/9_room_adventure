@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     
     public AudioClip WeaponGet; //In Progress, tentative to change
 
-    //public AudioClip HealthUp;
+    public AudioClip HealthUp;
 
     public FloatingJoystick leftJS, rightJS;
 
@@ -203,6 +203,7 @@ public class PlayerController : MonoBehaviour
         //If lp<3 and on trigger enter health pick up
         if (LP < 3 && collision.CompareTag("HealthPickUp"))
         {
+            playerSource.PlayOneShot(HealthUp);
             HP[LP].GetComponent<Image>().color = new Color(HP[LP].GetComponent<Image>().color.r, HP[LP].GetComponent<Image>().color.g, HP[LP].GetComponent<Image>().color.b, 1f);
             LP++;
             Destroy(collision.gameObject);

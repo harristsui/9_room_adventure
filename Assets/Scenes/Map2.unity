@@ -2409,7 +2409,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 797c31551c2ec48d590d33ae7875b036, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9e5a856e4b82e41eeb8ec4a4bc1f03d7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -28563,6 +28563,7 @@ MonoBehaviour:
   playerLaser: {fileID: 8300000, guid: 8faa3d483d25b4bcab3fd286b9bc4ea5, type: 3}
   Ouch: {fileID: 8300000, guid: a15dfb1e9ed43475092a046a1b6fa089, type: 3}
   WeaponGet: {fileID: 8300000, guid: 9f03606b2f423435f92a7c80b9497852, type: 3}
+  HealthUp: {fileID: 8300000, guid: dc49042ef45c143639675c0dc7d2b07e, type: 3}
   leftJS: {fileID: 1661790763}
   rightJS: {fileID: 1529424372}
 --- !u!50 &1862213084
