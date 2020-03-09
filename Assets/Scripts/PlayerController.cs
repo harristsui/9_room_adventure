@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
 		//shoot in phone
         if (rightJS.Horizontal != 0 || rightJS.Vertical != 0)
 		{
-			Instantiate(Bullet, firePoint.position, gunHolder.transform.rotation);
+			Instantiate(Bullet, firePoint.position, firePoint.transform.rotation);
             playerSource.PlayOneShot(playerLaser);
             playerSource.pitch = Random.Range(.85f, 1.15f);
 		}
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
         //shoot in laptop
         if (Input.GetButton("Jump"))
         {
-            Instantiate(Bullet, firePoint.position, gunHolder.transform.rotation);
+            Instantiate(Bullet, firePoint.position, firePoint.transform.rotation);
             playerSource.PlayOneShot(playerLaser);
             playerSource.pitch = Random.Range(.85f, 1.15f);
         }
