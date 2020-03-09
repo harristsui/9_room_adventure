@@ -128,7 +128,7 @@ public class GameManage : MonoBehaviour
 
 
         //if reaches goal, turn on game over canvas
-        if (!goal || PlayerController.LP <= 0)
+        if (PlayerController.LP <= 0)
         {
             GameOverCanvas.SetActive(true);
         }

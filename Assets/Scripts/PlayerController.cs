@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -45,6 +46,11 @@ public class PlayerController : MonoBehaviour
         HP[0].SetActive(true);
         HP[1].SetActive(true);
         HP[2].SetActive(true);
+
+        HP[0].GetComponent<Image>().color = new Color(HP[0].GetComponent<Image>().color.r, HP[0].GetComponent<Image>().color.g, HP[0].GetComponent<Image>().color.b, 1f);
+        HP[1].GetComponent<Image>().color = new Color(HP[1].GetComponent<Image>().color.r, HP[1].GetComponent<Image>().color.g, HP[1].GetComponent<Image>().color.b, 1f);
+        HP[2].GetComponent<Image>().color = new Color(HP[2].GetComponent<Image>().color.r, HP[2].GetComponent<Image>().color.g, HP[2].GetComponent<Image>().color.b, 1f);
+
         rb = GetComponent<Rigidbody2D>();
         c = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -197,8 +203,8 @@ public class PlayerController : MonoBehaviour
         //If lp<3 and on trigger enter health pick up
         if (LP < 3 && collision.CompareTag("HealthPickUp"))
         {
+            HP[LP].GetComponent<Image>().color = new Color(HP[LP].GetComponent<Image>().color.r, HP[LP].GetComponent<Image>().color.g, HP[LP].GetComponent<Image>().color.b, 1f);
             LP++;
-            HP[LP].SetActive(true);
             Destroy(collision.gameObject);
         }
 
@@ -260,7 +266,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Hurt()
     {
-        HP[LP].SetActive(false);
+        HP[LP].GetComponent<Image>().color = new Color(HP[LP].GetComponent<Image>().color.r, HP[LP].GetComponent<Image>().color.g, HP[LP].GetComponent<Image>().color.b, .3f);
         if (LP == 0)
         {
             Destroy(gameObject);
